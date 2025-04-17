@@ -1,0 +1,240 @@
+:root{
+    --purple:rgb(111, 33, 238);
+    --whitesmoke: rgb(231, 226, 226);
+    --myfont: sans-serif;
+    --valid: rgb(0, 226, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    font-family: var(--myfont);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 0 4px 1px var(--purple) inset;
+    overflow-y: scroll;
+}
+
+.container .head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    box-shadow: 0 0 4px 1px gray;
+    padding: 10px;
+}
+
+.container .head h3{
+    color: var(--purple);
+}
+
+.container .head .search{
+    width: 80%;
+    height: 35px;
+}
+.container .head .search form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container .head .search input,button{
+    height: 100%;
+    border-radius: 4px;
+}
+.container .head .search input{
+    height: 100%;
+    width: 90%;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid var(--purple);
+}
+.container .head .search button{
+    height: 100%;
+    border: none;
+    padding: 5px 20px;
+    color: white;
+    background-color: var(--purple);
+}
+
+.container .content-box{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0 0 4px 1px gray;
+    gap: 20px;
+}
+
+.container .content-box .content{
+    height: 300px;
+    grid-column: span 1;
+    box-shadow: 0 0 4px 1px gray inset;
+    text-transform: capitalize;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.container .content-box .expand{
+    height: 500px;
+    grid-column: span 2;
+    overflow-y: scroll;
+}
+
+.container .content-box .content span{
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    padding: 0 11px;
+    margin-bottom: 20px;
+}
+
+.container .content-box .content .item{
+    padding: 15px;
+    box-shadow: 0 0 4px 1px gray;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8rem;
+    border-radius: 4px;
+}
+
+.container .content-box .pending-req .item{
+    box-shadow: 0 0 2px 1px red;
+}
+
+.container .content-box .approve-req .item{
+    box-shadow: 0 0 2px 1px var(--valid);
+}
+
+.container .content-box .content .item h4{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.container .content-box .content .item a{
+    color: white;
+    background-color: var(--valid);
+}
+
+.container .content-box .content a{
+    padding: 5px 8px;
+    color: var(--purple);
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+@media (max-width:600px) {
+
+    .container{
+        padding: 10px;
+        box-shadow: 0 0 4px 1px var(--purple) inset;
+    }
+
+    .container .content-box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container .content-box .content{
+        height: 200px;
+    }
+
+    .container .head{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 60px;
+    }
+    .container h4,p,a{
+        font-size: .9rem;
+    }
+    .container h3{
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .container .head .search{
+        width: 100%;
+    }
+    .container .head .search button{
+        padding: 5px 10px;
+    }
+}
+
+
+@media (min-width:601px) and (max-width:1500px) {
+
+    .container h3,h4,p,a{
+        font-size: .9rem;
+    }
+    
+    .container .head{
+        padding: 20px;
+    }
+
+    .container .head h3{
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    } 
+    
+    .container .head .search{
+        width: 50%;
+    }
+
+}
+
+
+@media (min-width:601px) and (max-width:900px) {
+    .container .content-box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:601px) and (max-width:850px){
+    .container h3,h4,p,a{
+        font-size: 1.3rem;
+    }
+    .container .head{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container .head h3{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    } 
+
+    .container .head .search{
+        width: 100%;
+    }
+
+    .container .head .search form input,button{
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+}
+
+/* control the length of the content container on it individual page */
+.container .content-box .expand{
+    height: 70vh;
+}
+
+#cancel{
+    background-color: red;
+}

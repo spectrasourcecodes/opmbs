@@ -1,0 +1,109 @@
+:root{
+    --purple:rgb(111, 33, 238);
+    --whitesmoke: rgb(231, 226, 226);
+    --myfont: sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    font-family: var(--myfont);
+}
+
+footer{
+    color: white;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 32);
+    padding: 40px 80px;
+}
+
+footer h4{
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+footer .content{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 0;
+}
+
+footer .content div{
+    padding-left: 20px;
+}
+footer .content div ul{
+    display: flex;
+    flex-direction: column;
+}
+footer .content div ul a{
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+footer .content div span{
+    display: flex;
+    padding-bottom: 10px;
+}
+footer .content div span i{
+    margin-right: 10px;
+}
+
+footer .linear{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid white;
+    text-transform: capitalize;
+}
+
+footer .linear .media i{
+    color: white;
+    padding: 0 5px;
+}
+
+footer i:hover{
+    font-size: 1.1rem;
+    opacity: .6;
+}
+
+@media (max-width:600px) {
+    footer{
+        padding: 20px 20px;
+    }
+    footer .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .content div{
+        margin-bottom: 30px;
+    }
+    footer h4{
+        margin-bottom: 10px;
+    }
+    footer p{
+        font-size: .9rem;
+    }
+    footer .linear{
+        padding-top: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+    }
+    footer .linear .media{
+        margin-top: 20px;
+    }
+    footer .linear .media i{
+        padding: 0 5px;
+    }
+}

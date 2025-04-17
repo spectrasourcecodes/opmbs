@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spectra lapbook-pro</title>
+    <link rel="stylesheet" href="../../bootstrap5/css/all.css">
+    <link rel="stylesheet" href="../../public/styles/user/header.css">
+    <link rel="stylesheet" href="../../public/styles/user/login.css">
+</head>
+<body>
+
+
+    <header>
+        <nav>
+            <label for="nav" class=".logo"><a href="./index.html">Spectra <span>lapbook pro</span></a></label>
+            <ul>
+                <a href="./index.html">home</a>
+                <a href="./booking.html" id="calltoaction">book manual</a>
+                <a href="#">about</a>
+                <a href="./help.html">help</a>
+                <a href="./login.html">login</a>
+            </ul>
+            <div class="navbar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </nav>
+        <div class="sidenav">
+            <ol>
+                <a href="./index.html"><i class="fa-solid fa-home"></i>home</a>
+                <a href="./login.html"><i class="fa-solid fa-unlock"></i>login</a>
+                <a href="./booking.html"><i class="fa-solid fa-book-bookmark"></i>book manual</a>
+                <a href="#"><i class="fa-solid fa-building-ngo"></i>about</a>
+                <a href="./help.html"><i class="fa-brands fa-accessible-icon"></i>help</a>
+            </ol>
+        </div>
+    </header>
+    
+    <!-- page content -->
+    <div class="container">
+        <div class="left">
+            <form action="">
+                <h2>Welcome Back</h2>
+                <p>Sign in to manage your bookings and preferences</p>
+                <label for="email">email address</label>
+                <div class="inputbox">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <label for="email">password</label>
+                <div class="inputbox">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="inputbox">
+                    <input type="checkbox" name="reminder" id="reminder">
+                    <label for="checkbox">remind me</label>
+                    <a href="./resetpass.html">fogetten password</a>
+                </div>
+                <div class="inputbox">
+                    <input type="submit" name="login" value="sign in">
+                </div>
+
+                <p>Don't have an account? <a href="./signup.html">sign up</a></p>
+            </form>
+        </div>
+        <div class="right">
+            <h2>discover amazing experience</h2>
+            <p>Book your next adventure with our easy-to-use platform</p>
+            <div class="quote">
+                <i class="fa-solid fa-comments-dollar"></i>
+                <p>"The best practical manual booking platform i've used, simple , fast, and reliable"</p>
+                <div class="owner">
+                    <img src="../../public/images/lady16.jpg" alt="">
+                    <span><h4>ismail muhammad sani</h4><p>fulafia student</p></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../../public/script/header.js"></script>
+</body>
+</html>

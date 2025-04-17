@@ -1,0 +1,120 @@
+:root{
+    --purple:rgb(111, 33, 238);
+    --whitesmoke: rgb(231, 226, 226);
+    --myfont: sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    font-family: var(--myfont);
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    overflow: auto;
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .content-box{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2px 1px var(--purple);
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container .content-box .content{
+    height: 300px;
+    grid-column: span 1;
+    padding: 20px;
+    box-shadow: 0 0 5px 2px gray;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.container .content-box .content span{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+.container .content-box .content span h3{
+    font-size: 1.1rem;
+}
+
+.container .content-box .content .item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.container .content-box .content .item a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: var(--purple);
+    text-transform: capitalize;
+}
+
+.container .content-box .content .item h4{
+    text-transform: uppercase;
+}
+
+@media (max-width:600px) {
+    .container{
+        margin-top: 60px;
+        padding: 10px;
+    }
+    .container .content-box{
+        box-shadow: 0 0 5px 1px var(--purple);
+        grid-template-columns: repeat(1, 1fr);
+        border-radius: 5px;
+    }
+
+    .container .content-box .content{
+        height: 200px;
+        padding: 10px;
+        box-shadow: 0 0 5px 1px var(--whitesmoke);
+    }
+
+    .container .content-box .content span{
+        font-size: .9rem;
+    }
+
+    .container .content-box .content .item{
+        margin-top: 10px;
+        font-size: .8rem;
+    }
+    
+}

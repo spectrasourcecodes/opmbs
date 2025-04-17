@@ -1,0 +1,170 @@
+:root{
+    --purple:rgb(111, 33, 238);
+    --whitesmoke: rgb(231, 226, 226);
+    --myfont: sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    font-family: var(--myfont);
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container .left,.right{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .left form{
+    width: 400px;
+    height: auto;
+    padding: 40px;
+    border: 1px solid var(--purple);
+    border-radius: 5px;
+}
+
+.container .left form h2{
+    font-size: 1.2rem;
+}
+
+.container .left form p{
+    margin: 10px 0 20px 0;
+}
+
+.container .left form label{
+    font-weight: bold;
+    font-size: .9rem;
+    text-transform: capitalize;
+}
+.container .left form .inputbox{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    margin: 10px 0 20px 0;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.container .left form .inputbox i{
+    top: 5px;
+    left: 5px;
+    position: absolute;
+}
+.container .left form .inputbox input{
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
+    border-radius: 3px;
+    border: 1px solid silver;
+}
+
+.container .left form .inputbox input[type="checkbox"]{
+    width: 15px;
+    margin-right: 10px;
+}
+.container .left form .inputbox a{
+    color: var(--purple);
+    position: absolute;
+    right: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.container .left form .inputbox input[type="submit"]{
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 0;
+    background-color: var(--purple);
+    transition: .5s;
+}
+.container .left form .inputbox input[type="submit"]:hover{
+    color: var(--purple);
+    background-color: white;
+}
+
+/* right */
+.container .right{
+    color: white;
+    background-color: var(--purple);
+}
+
+.container .right h2{
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.container .right .quote{
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 2px 2px rgb(134, 59, 255);
+}
+.container .right .quote .owner{
+    display: flex;
+    text-transform: capitalize;
+}
+
+.container .right .quote .owner p{
+    font-size: .8rem;
+}
+
+.container .right .quote .owner img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* login media query */
+@media (max-width:600px) {
+    .container{
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .container .left,.right{
+        width: 100vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container .left form{
+        width: 90vw;
+    }
+
+    .container .left form h2{
+        font-size: 1rem;
+    }
+
+    .container .right h2{
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .container .right .quote{
+        width: 90vw;
+    }
+}
