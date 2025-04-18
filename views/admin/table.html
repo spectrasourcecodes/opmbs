@@ -6,7 +6,7 @@
     <title>spectra lapbook-pro admin section</title>
     <link rel="stylesheet" href="../../bootstrap5/css/all.css">
     <link rel="stylesheet" href="../../public/styles/admin/header.css">
-    <link rel="stylesheet" href="../../public/styles/admin/bookings.css">
+    <link rel="stylesheet" href="../../public/styles/admin/table.css">
     <link rel="stylesheet" href="../../public/styles/admin/footer.css">
 </head>
 <body>
@@ -45,13 +45,16 @@
             <h2>all practical manual bookings</h2>
             <div class="filters">
                 <form action="#" method="post">
-                    <input type="search" name="" id="" placeholder="use email to search...">
+                    <input type="email" name="" id="" placeholder="use email to search...">
+                    <button type="submit">search</button>
+                </form>
+                <form action="#" method="post">
                     <select name="status" id="status">
                         <option value="all status">all status</option>
+                        <option value="approved">approved</option>
                         <option value="pending">pending</option>
-                        <option value="confirmed">confirmed</option>
-                        <option value="cancelled">cancelled</option>
                     </select>
+                    <button type="submit">search</button>
                 </form>
                 <form action="#" method="post">
                     <select name="status" id="status">
@@ -60,6 +63,7 @@
                         <option value="csc 311">csc 311</option>
                         <option value="csc 411">csc 411</option>
                     </select>
+                    <button type="submit">search</button>
                 </form>
             </div>
             <div class="table-container">

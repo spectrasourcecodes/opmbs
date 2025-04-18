@@ -25,8 +25,9 @@ main{
 .bookings-container{
     width: 100%;
     height: auto;
-    margin-top: 60px;
-    padding: 40px 30px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 0 4px 1px gray;
 }
 
 .bookings-container h2{
@@ -46,6 +47,13 @@ main{
     height: 100%;
     padding: 5px;
     text-transform: capitalize;
+}
+
+.bookings-container .filters button{
+    color: white;
+    background-color: var(--purple);
+    padding: 5px 10px;
+    border: none;
 }
 
 .bookings-container .table-container{
@@ -84,6 +92,27 @@ main{
     .bookings-container h2{
         font-size: 1.1rem;
     }
+
+    .bookings-container .filters form{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bookings-container .filters{
+        width: 100%;
+        gap: 10px;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .bookings-container .filters input,select{
+        height: 100%;
+        width: 70%;
+    }
+    .bookings-container .filters button{
+        width: 20%;
+    }
+
     .bookings-container .table-container table{
         font-size: .9rem;
     }

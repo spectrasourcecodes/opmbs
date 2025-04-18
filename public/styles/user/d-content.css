@@ -34,10 +34,12 @@ body{
     text-transform: capitalize;
     box-shadow: 0 0 4px 1px gray;
     padding: 10px;
+    background-color: white;
 }
 
 .container .head h3{
-    color: var(--purple);
+    color: silver;
+    opacity: .9;
 }
 
 .container .head .search{
@@ -56,7 +58,7 @@ body{
 }
 .container .head .search input{
     height: 100%;
-    width: 90%;
+    width: 80%;
     padding: 0 10px;
     outline: none;
     border: 1px solid var(--purple);
@@ -74,28 +76,29 @@ body{
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 20px;
+    padding: 40px 20px;
     box-shadow: 0 0 4px 1px gray;
-    gap: 20px;
+    gap: 60px;
+    text-transform: capitalize;
+    overflow-y: scroll;
+    background-color: white;
 }
 
 .container .content-box .content{
     height: 300px;
     grid-column: span 1;
     box-shadow: 0 0 4px 1px gray inset;
-    text-transform: capitalize;
     padding: 20px;
     overflow-y: scroll;
+    background-color: white;
 }
 
 .container .content-box .expand{
-    height: 500px;
     grid-column: span 2;
-    overflow-y: scroll;
 }
 
-.container .content-box .content span{
+.container .content-box .wrapper span{
     display: flex;
     justify-content: space-between;
     font-size: .9rem;
@@ -112,6 +115,7 @@ body{
     align-items: center;
     font-size: .8rem;
     border-radius: 4px;
+    background-color: white;
 }
 
 .container .content-box .pending-req .item{
@@ -139,6 +143,21 @@ body{
     border-radius: 3px;
 }
 
+.b-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.b-btn #pending{
+    color: var(--purple);
+    background-color: white;
+}
+
+.b-btn #cancel{
+    background-color: red;
+}
+
 @media (max-width:600px) {
 
     .container{
@@ -147,11 +166,8 @@ body{
     }
 
     .container .content-box{
+        margin-top: 30px;
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .container .content-box .content{
-        height: 200px;
     }
 
     .container .head{
@@ -171,8 +187,11 @@ body{
     .container .head .search{
         width: 100%;
     }
+    .container .head .search input{
+        width: 75%;
+    }
     .container .head .search button{
-        padding: 5px 10px;
+        padding: 5px 15px;
     }
 }
 
@@ -231,10 +250,6 @@ body{
 }
 
 /* control the length of the content container on it individual page */
-.container .content-box .expand{
+.container .content-box .expand .content{
     height: 70vh;
-}
-
-#cancel{
-    background-color: red;
 }
