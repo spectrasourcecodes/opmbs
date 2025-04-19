@@ -188,8 +188,20 @@ body{
         padding: 5px 15px;
     }
 
+    .container .content-box{
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
     .container .content-box .wrapper{
-        margin: 10px 0;
+        margin: 10px;
+        padding: 20px 0;
+        border: 1px solid silver;
+    }
+
+    .container .content-box .wrapper .content{
+        border-top: 1px solid silver;
     }
 
     .container .content-box .wrapper span{
