@@ -1,5 +1,5 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(111, 33, 238);
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -25,14 +25,14 @@ main{
 /* article */
 article{
     width: 100%;
-    height: 400px;
+    height: 600px;
     color: white;
-    background-color: var(--purple);
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 50px;
     box-shadow: 0 0 10px 0 gray;
 }
 
@@ -48,7 +48,7 @@ article p a{
 
 article a{
     font-size: 1.2rem;
-    color: var(--purple);
+    color: var(--blue);
     padding: 10px 15px;
     border-radius: 4px;
     background-color: white;
@@ -65,8 +65,7 @@ article a:hover{
 /* article media query */
 @media (max-width:600px) {
     article{
-        height: auto;
-        margin-top: 70px;
+        height: 360px;
         padding: 40px;
         text-align: center;
     }

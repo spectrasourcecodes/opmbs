@@ -168,7 +168,7 @@ body{
         align-items: flex-start;
         flex-direction: column;
         padding: 20px;
-        margin-top: 80px;
+        margin-top: 60px;
     }
     .container h4,p,a{
         font-size: .9rem;
