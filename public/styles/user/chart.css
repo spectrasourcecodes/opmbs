@@ -23,26 +23,27 @@ body{
     height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
     gap: 30px;
     margin-top: 30px;
-    box-shadow: 0 0 4px 1px gray;
+}
+
+.two-chart{
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .chart-container .chart{
-    height: 200px;
     grid-column: span 1;
-    box-shadow: 0 0 4px 1px gray;
+    box-shadow: 2px 2px 4px 1px gray;
     padding: 20px;
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .chart-container .chart i{
-    color: var(--purple);
     font-size: 3rem;
 }
 
@@ -56,32 +57,60 @@ body{
 }
 
 .chart-container .chart a{
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
+    color: var(--purple);
     text-decoration: none;
-    background-color: var(--purple);
-    transition: .5s;
 }
 
-.chart-container .chart a:hover{
-    padding: 8px 18px;
-    box-shadow: 0 0 3px 2px white inset;
-    border: 1px solid var(--purple);
+.chart-container .chart .add-icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    background: none;
+}
+
+.chart-container .chart .add-icon:hover{
+    padding: 0%;
+    box-shadow: none;
+    border: none;
+}
+
+.chart-container .chart .add-icon i{
+    color: var(--purple);
+    font-size: 1.5rem;
+    transition: .5s;
 }
 
 @media (max-width:600px) {
     .chart-container{
-        grid-template-columns: repeat(1, 1fr);
-        padding: 20px;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        gap: 5px;
     }
 
+
     .chart-container .chart{
-        height: 220px;
+        padding: 10px;
+    }
+
+    .chart-container .chart i{
+        font-size: 1.8rem;
     }
 
     .chart-container .chart p{
-        font-size: 1.2rem;
+        font-size: .8rem;
+        text-align: center;
     }
+
+    .chart-container .chart h3{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .chart-container .chart .add-icon i{
+        color: black;
+        font-size: .9rem;
+        transition: .5s;
+    }
+
 }

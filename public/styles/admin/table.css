@@ -2,6 +2,7 @@
     --purple:rgb(111, 33, 238);
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
+    --valid: rgb(0, 226, 0);
 }
 
 *{
@@ -61,7 +62,8 @@ main{
     height: auto;
     padding: 10px;
     box-shadow: 0 0 3px 2px silver;
-    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 .bookings-container .table-container table{
@@ -72,10 +74,10 @@ main{
 }
 
 .bookings-container .table-container table th,td{
-    /* text-align: center; */
     text-transform: capitalize;
     border: 1px solid black;
-    padding: 5px 10px;
+    padding: 10px;
+    text-wrap: nowrap;
 }
 
 .bookings-container .table-container table tr td select{
@@ -86,6 +88,33 @@ main{
         color: black;
         background-color: white;
     }
+}
+
+.bookings-container .table-container table #suspend,#activate,#delete{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.bookings-container .table-container table td:has(a){
+    color: white;
+    padding: 0%;
+    text-align: center;
+}
+.bookings-container .table-container table td a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bookings-container .table-container table #suspend{
+    background-color: yellow;
+}
+.bookings-container .table-container table #activate{
+    background-color: var(--valid);
+}
+.bookings-container .table-container table #delete{
+    background-color: red;
 }
 
 @media (max-width:600px) {

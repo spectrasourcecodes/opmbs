@@ -36,7 +36,7 @@ main{
 .faq-conatainer .faq details{
     width: 100%;
     padding: 30px;
-    box-shadow: 0 0 5px 3px silver;
+    box-shadow: 2px 2px 4px 2px silver;
     margin: 20px 0;
 }
 .faq-conatainer .faq details summary{
@@ -52,11 +52,15 @@ main{
 @media (max-width:600px) {
     .faq-conatainer{
         padding: 20px;
-        margin-top: 20px;
+        margin-top: 0;
     }
 
     .faq-conatainer .faq details{
         padding: 20px;
         margin: 10px 0;
+    }
+
+    .faq-conatainer h2{
+        font-size: 1.2rem;
     }
 }

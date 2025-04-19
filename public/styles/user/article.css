@@ -38,7 +38,7 @@ article{
 
 article h2{
     text-transform: capitalize;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 2rem;
 }
 
@@ -54,7 +54,7 @@ article a{
     background-color: white;
     text-decoration: none;
     text-transform: capitalize;
-    margin-top: 20px;
+    margin-top: 30px;
     transition: .5s;
 }
 
@@ -67,17 +67,19 @@ article a:hover{
     article{
         height: auto;
         margin-top: 70px;
-        padding: 60px 40px;
+        padding: 40px;
         text-align: center;
     }
     article h2{
         font-size: 1.4rem;
+        margin-bottom: 20px;
     }
     article p{
         font-size: 1rem;
-        padding: 0 10px;
+        padding: 0 8px;
     }
     article a{
         font-size: 1rem;
+        margin-top: 20px;
     }
 }

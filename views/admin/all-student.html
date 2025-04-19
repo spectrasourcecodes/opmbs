@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spectra lapbook-pro</title>
+    <link rel="stylesheet" href="../../bootstrap5/css/all.css">
+    <link rel="stylesheet" href="../../public/styles/user/header.css">
+    <link rel="stylesheet" href="../../public/styles/user/dashboard-master.css">
+    <link rel="stylesheet" href="../../public/styles/user/d-content.css">
+    <link rel="stylesheet" href="../../public/styles/user/chart.css">
+    <link rel="stylesheet" href="../../public/styles/admin/table.css">
+</head>
+<body>
+
+    <main>
+
+        <div class="dashboard">
+            <div class="side-nav">
+                <!-- desktop nav bar -->
+                <section>
+                    <label for="logo" class="logo" id="logo"><a href="./dashboard.html">Spectra <span>lapbook pro</span></a></label>
+                    <div class="menu">
+                        <i class="fa-solid fa-bars" id="fa-bars"></i>
+                        <i class="fa-solid fa-xmark" id="fa-xmark"></i>
+                    </div>
+                </section>
+
+                <div class="nav">
+                    <h3><i class="fa-solid fa-dashboard"></i>admin dashboard</h3>
+                    <ul>
+                        <a href="./approved-request.html"><i class="fa-solid fa-newspaper"></i> approved request </a>
+                        <a href="./pending-request.html"><i class="fa-solid fa-recycle"></i> pending request </a>
+                        <a href="./available-manual.html"><i class="fa-solid fa-book"></i> available manuals </a>
+                        <a href="./recently-added.html"><i class="fa-solid fa-book-bookmark"></i> recently added </a>
+                        <a href="./help.html"><i class="fa-brands fa-accessible-icon"></i> need support </a>
+                        <a href="./signup.html"><i class="fa-brands fa-add"></i> add studnet </a>
+                        <a href="./recently-added.html"><i class="fa-solid fa-gears"></i> settings </a>
+                    </ul>
+                </div>
+                <!-- desktop nav bar -->
+
+            </div>
+            <div class="display-container" id="display">
+                <!-- mobile nav bar -->
+                <header>
+                    <nav>
+                        <label for="nav" class=".logo"><a href="./dashboard.html">Spectra <span>lapbook pro</span> [admin]</a></label>
+                        <div class="navbar">
+                            <i class="fa-solid fa-bars" id="bars"></i>
+                            <i class="fa-solid fa-xmark" id="xmark"></i>
+                        </div>
+                    </nav>
+                    <div class="sidenav" id="sidenav">
+                        <ol>
+                            <a href="./approved-request.html"><i class="fa-solid fa-newspaper"></i> approved request </a>
+                            <a href="./pending-request.html"><i class="fa-solid fa-recycle"></i> pending request </a>
+                            <a href="./available-manual.html"><i class="fa-solid fa-book"></i> available manuals </a>
+                            <a href="./recently-added.html"><i class="fa-solid fa-book-bookmark"></i> recently added </a>
+                            <a href="./help.html"><i class="fa-brands fa-accessible-icon"></i> need support </a>
+                            <a href="./signup.html"><i class="fa-brands fa-add"></i> add studnet </a>
+                            <a href="./recently-added.html"><i class="fa-solid fa-gears"></i> settings </a>
+                        </ol>
+                    </div>
+                </header>
+                <!-- mobile nav bar -->
+
+                <!-- dashboard content -->
+                <!-- dashboard content -->
+                 <div class="container">
+                    <div class="head">
+                        <h3>welcome ismail muhammad</h3>
+                        <div class="search">
+                            <form action="" method="post">
+                                <input type="search" name="manual" id="search" placeholder="Use course code to search manual...">
+                                <button type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- table -->
+                    <div class="bookings-container">
+                        <h2>all registered students</h2>
+                        <div class="filters">
+                            <form action="#" method="post">
+                                <input type="email" name="" id="" placeholder="use email to search...">
+                                <button type="submit">search</button>
+                            </form>
+                            <form action="#" method="post">
+                                <select name="status" id="status">
+                                    <option value="all status">all status</option>
+                                    <option value="approved">approved</option>
+                                    <option value="pending">pending</option>
+                                </select>
+                                <button type="submit">search</button>
+                            </form>
+                            <form action="#" method="post">
+                                <select name="status" id="status">
+                                    <option value="csc 111">csc 111</option>
+                                    <option value="csc 211">csc 211</option>
+                                    <option value="csc 311">csc 311</option>
+                                    <option value="csc 411">csc 411</option>
+                                </select>
+                                <button type="submit">search</button>
+                            </form>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>s/n</th>
+                                    <th>full name</th>
+                                    <th>email address</th>
+                                    <th>phone number</th>
+                                    <th>faculty</th>
+                                    <th>department</th>
+                                    <th>level</th>
+                                    <th>status</th>
+                                    <th>action</th>
+                                    <th>action</th>
+                                    <th>action</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>yahaya abdulbari</td>
+                                    <td>johndoepedrospectralapbookpro@gmail.com</td>
+                                    <td>09063509119</td>
+                                    <td>computing</td>
+                                    <td>computer science</td>
+                                    <td>400l</td>
+                                    <td>active</td>
+                                    <td id="suspend"><a href="#">suspend</a></td>
+                                    <td id="activate"><a href="#">activate</a></td>
+                                    <td id="delete"><a href="#">delete</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+            
+                    <!-- table -->
+                 </div>
+                <!-- dashboard content -->
+                <!-- dashboard content -->
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../../public/script/dashboard.js"></script>
+
+
+</body>
+</html>

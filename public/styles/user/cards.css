@@ -30,7 +30,6 @@ main{
 }
 .cards-container h3{
     text-transform: capitalize;
-    margin-bottom: 20px;
 }
 .cards-container .wrapper{
     width: 100%;
@@ -49,8 +48,8 @@ main{
     flex-direction: column;
     align-items: center;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 3px silver;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 2px silver;
 }
 
 .cards-container .card:hover{
@@ -86,7 +85,7 @@ main{
     text-transform: capitalize;
 }
 .cards-container .card p{
-    margin: 20px 0;
+    margin: 20px;
     color: gray;
 }
 
@@ -120,14 +119,7 @@ main{
     }
     
     .cards-container .card{
-        text-align: center;
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 0 0 5px 3px silver;
-
+        height: auto;
+        padding: 20px 10px;
     }
 }
