@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root{
     --purple:rgb(111, 33, 238);
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
+    --header-font: "Special Gothic Expanded One", sans-serif;
 }
 
 *{
@@ -39,14 +42,12 @@ header nav{
 
 
 header nav label{
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 4px;
-    font-size: 1rem;
-    padding: 10px;
+    font-size: 1.3rem;
     text-transform: uppercase;
     transition: .5s;
-    font-family: cursive;
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: var(--header-font);
 }
 
 header nav label a{
@@ -111,7 +112,6 @@ header .sidenav{
     background-color: white;
     z-index: 98;
     transition: .5s;
-    /* text-align: center; */
 }
 
 
