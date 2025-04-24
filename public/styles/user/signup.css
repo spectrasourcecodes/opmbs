@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --blue:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -19,5 +20,108 @@ body{
 
 main{
     width: 100%;
+    height: 100vh;
+}
+
+/* booking form */
+.booking-form{
+    width: 100%;
     height: auto;
+    padding: 30px;
+}
+.booking-form h3{
+    text-transform: capitalize;
+}
+.booking-form form{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 0 5px 3px silver;
+    margin-top: 10px;
+}
+.booking-form form .inputbox{
+    grid-column: span 1;
+}
+.booking-form form .inputbox a{
+    color: var(--blue);
+}
+.booking-form form .inputbox label{
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.booking-form form .inputbox input,select{
+    width: 100%;
+    height: 35px;
+    padding-left: 20px;
+    margin-top: 10px;
+    border: 1px solid silver;
+    border-radius: 4px;
+}
+
+.booking-form form .inputbox input[type="submit"]{
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 0;
+    background-color: var(--blue);
+    transition: .5s;
+    border: none;
+    margin-top: 27px;
+}
+.booking-form form .inputbox input[type="submit"]:hover{
+    color: var(--blue);
+    background-color: white;
+    box-shadow: 0 0 3px 2px silver;
+}
+
+/* password strength */
+.password-strength {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.strength-bar {
+    height: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.strength-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #ff4757;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+
+/* booking media query */
+@media (max-width:600px) {
+    .booking-form{
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+    }
+    .booking-form h3{
+        text-transform: capitalize;
+    }
+    .booking-form form{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        padding: 20px;
+        box-shadow: 0 0 5px 3px silver;
+        margin-top: 10px;
+    }
+    .booking-form form .inputbox input[type="submit"]{
+        margin-top: 20px;
+    }
 }

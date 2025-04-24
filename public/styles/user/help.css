@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --blue:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -46,7 +47,7 @@ header nav{
 header nav label{
    color: white;
     font-weight: bold;
-    background-color: var(--purple);
+    background-color: var(--blue);
     border-radius: 4px;
     font-size: 1rem;
     padding: 10px;
@@ -57,7 +58,7 @@ header nav label:hover{
     background-color: white;
     box-shadow: 0 0 3px 3px var(--whitesmoke);
     a{
-        color: var(--purple);
+        color: var(--blue);
     }
 }
 
@@ -83,7 +84,7 @@ header nav ul a{
 
 header nav ul a:hover{
     color: white;
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 
 header nav .navbar{
@@ -91,7 +92,7 @@ header nav .navbar{
     position: relative;
     padding: 10px;
     border-radius: 3px;
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 header nav .navbar{
     display: none;
@@ -124,7 +125,7 @@ header .sidenav ol{
 }
 
 header .sidenav ol a{
-    color: var(--purple);
+    color: var(--blue);
     text-decoration: none;
     font-size: 1rem;
     margin-top: 10px;
@@ -162,7 +163,7 @@ article{
     width: 100%;
     height: 400px;
     color: white;
-    background-color: var(--purple);
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,7 +227,7 @@ article h2{
     margin-bottom: 30px;
 }
 .cards-container .card i{
-    color: var(--purple);
+    color: var(--blue);
     font-size: 1.5rem;
 }
 
@@ -240,7 +241,7 @@ article h2{
 
 .cards-container .card button{
     border: none;
-    background-color: var(--purple);
+    background-color: var(--blue);
     padding: 10px;
     border-radius: 5px;
 }

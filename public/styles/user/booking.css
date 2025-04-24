@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --blue:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -27,7 +28,7 @@ article{
     width: 100%;
     height: 400px;
     color: white;
-    background-color: var(--purple);
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,12 +98,12 @@ article h2{
     font-weight: bold;
     text-transform: capitalize;
     padding: 0;
-    background-color: var(--purple);
+    background-color: var(--blue);
     transition: .5s;
     border: none;
 }
 .booking-form form .inputbox input[type="submit"]:hover{
-    color: var(--purple);
+    color: var(--blue);
     background-color: white;
     box-shadow: 0 0 3px 2px silver;
 }
@@ -164,7 +165,7 @@ article h2{
     margin-bottom: 30px;
 }
 .cards-container .card i{
-    color: var(--purple);
+    color: var(--blue);
     font-size: 1.5rem;
 }
 
@@ -178,7 +179,7 @@ article h2{
 
 .cards-container .card button{
     border: none;
-    background-color: var(--purple);
+    background-color: var(--blue);
     padding: 10px;
     border-radius: 5px;
 }

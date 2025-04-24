@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --purple:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }

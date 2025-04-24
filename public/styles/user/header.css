@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue: rgb(0, 60, 255);
+    /* --blue:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -41,14 +42,18 @@ header nav{
 header nav label{
     font-weight: bold;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     transition: .5s;
     font-family: var(--myfont);
 }
 
+header nav label i{
+    margin-right: 10px;
+}
+
 header nav label a{
-    color: var(--purple);
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -59,7 +64,7 @@ header nav ul{
 }
 
 header nav ul a{
-    color: var(--purple);
+    color: var(--blue);
     font-size: 1rem;
     text-transform: capitalize;
     text-decoration: none;
@@ -70,23 +75,23 @@ header nav ul a{
 
 header #calltoaction{
     color: white;
-    background-color: var(--purple);
+    background-color: var(--blue);
     border-radius: 4px;
     padding: 5px 10px;
 }
 
 header nav ul a:hover{
-    border-bottom: 1.5px solid var(--purple);
+    border-bottom: 1.5px solid var(--blue);
 }
 
 header #calltoaction:hover{
     transition: .5;
-    color: var(--purple);
+    color: var(--blue);
     background-color: white;
 }
 
 header nav .navbar{
-    color: var(--purple);
+    color: var(--blue);
     position: relative;
     padding: 10px;
     border-radius: 3px;
@@ -122,7 +127,7 @@ header .sidenav ol{
 }
 
 header .sidenav ol a{
-    color: var(--purple);
+    color: var(--blue);
     text-decoration: none;
     font-size: 1rem;
     margin-top: 10px;
@@ -151,10 +156,24 @@ header .sidenav{
     }
 
     header nav .navbar{
+        font-size: 1.5rem;
         display: block !important;
+    }
+
+    header nav .navbar i{
+        font-size: 1.5rem;
     }
     
     header .sidenav{
         display: block !important;
+    }
+
+    header nav label i{
+        margin-right: 5px;
+        font-size: 1.4rem;
+    }
+    
+    header nav label a{
+        letter-spacing: -1px;
     }
 }

@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --blue:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -58,7 +59,7 @@ main{
     }
     i{
         transition: .5s;
-        color: var(--purple);
+        color: var(--blue);
     }
 }
 
@@ -69,7 +70,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--purple);
+    background-color: var(--blue);
     border-radius: 50%;
     text-align: center;
     margin-bottom: 30px;
@@ -91,7 +92,7 @@ main{
 
 .cards-container .card button{
     border: none;
-    background-color: var(--purple);
+    background-color: var(--blue);
     padding: 10px;
     border-radius: 5px;
 }

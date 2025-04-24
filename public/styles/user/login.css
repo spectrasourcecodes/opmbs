@@ -1,5 +1,6 @@
 :root{
-    --purple:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --blue:rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -50,6 +51,10 @@ body{
     margin: 10px 0 20px 0;
 }
 
+.container .left form p a{
+    color: var(--blue);
+}
+
 .container .left form label{
     font-weight: bold;
     font-size: .9rem;
@@ -82,7 +87,7 @@ body{
     margin-right: 10px;
 }
 .container .left form .inputbox a{
-    color: var(--purple);
+    color: var(--blue);
     position: absolute;
     right: 0;
     text-transform: capitalize;
@@ -94,18 +99,18 @@ body{
     font-weight: bold;
     text-transform: capitalize;
     padding: 0;
-    background-color: var(--purple);
+    background-color: var(--blue);
     transition: .5s;
 }
 .container .left form .inputbox input[type="submit"]:hover{
-    color: var(--purple);
+    color: var(--blue);
     background-color: white;
 }
 
 /* right */
 .container .right{
     color: white;
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 
 .container .right h2{

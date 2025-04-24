@@ -1,5 +1,6 @@
 :root{
-    --blue:rgb(111, 33, 238);
+    --blue:rgb(0, 60, 255);
+    /* --purple: rgb(111, 33, 238); */
     --whitesmoke: rgb(231, 226, 226);
     --myfont: sans-serif;
 }
@@ -33,6 +34,7 @@ article{
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+    box-shadow: 0 0 3px 3px silver;
 }
 
 article h2{

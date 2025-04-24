@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../bootstrap5/css/all.css">
     <link rel="stylesheet" href="../../public/styles/user/header.css">
     <link rel="stylesheet" href="../../public/styles/user/article.css">
-    <link rel="stylesheet" href="../../public/styles/user/booking-form.css">
+    <link rel="stylesheet" href="../../public/styles/user/signup.css">
     <link rel="stylesheet" href="../../public/styles/user/footer.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 
         <header>
             <nav>
-                <label for="nav" class=".logo"><a href="./index.html">Spectra <span>lapbook pro</span></a></label>
+                <label for="nav" class=".logo"><a href="./index.html"><i class="fa-solid fa-book"></i> Spectra <span>lapbook pro</span></a></label>
                 <ul>
                     <a href="./index.html">home</a>
                     <a href="./booking.html">book manual</a>
@@ -33,9 +33,9 @@
                 <ol>
                     <a href="./index.html"><i class="fa-solid fa-home"></i>home</a>
                     <a href="./login.html"><i class="fa-solid fa-unlock"></i>login</a>
-                    <a href="./booking.html"><i class="fa-solid fa-book-bookmark"></i>book manual</a>
                     <a href="#"><i class="fa-solid fa-building-ngo"></i>about</a>
                     <a href="./help.html"><i class="fa-brands fa-accessible-icon"></i>help</a>
+                    <a href="./booking.html"><i class="fa-solid fa-book-bookmark"></i>book manual</a>
                 </ol>
             </div>
         </header>
@@ -52,6 +52,10 @@
             <h3>Signup Here</h3>
             <form action="">
 
+                <div class="inputbox">
+                    <i class="fa-solid fa-user-alt"></i> <label for="full-name">first name</label><br>
+                    <input type="text" name="full-name" id="full-name">
+                </div>
                 <div class="inputbox">
                     <i class="fa-solid fa-user-alt"></i> <label for="full-name">full name</label><br>
                     <input type="text" name="full-name" id="full-name">
@@ -84,13 +88,22 @@
                         <option value="300L">300L</option>
                         <option value="400L">400L</option>
                         <option value="500L">500L</option>
-                        <option value="other">other</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
                 <div class="inputbox">
                     <i class="fa-solid fa-lock"></i> <label for="password">password</label><br>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="registerPassword">
+                    <!-- password strength -->
+                    <div class="password-strength">
+                        <span id="strength-text">Password strength: weak</span>
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strength-fill"></div>
+                        </div>
+                    </div>
+                    <!-- password strength -->
                 </div>
+                
                 <div class="inputbox">
                     <i class="fa-solid fa-lock"></i> <label for="password">confirm password</label><br>
                     <input type="password" name="cnf-password" id="cnf-password">
@@ -142,6 +155,7 @@
     </main>
     
     <script src="../../public/script/header.js"></script>
+    <script src="../../public/script/pass-stregth.js"></script>
 
 </body>
 </html>
