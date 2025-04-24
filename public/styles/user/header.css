@@ -43,7 +43,7 @@ header nav label{
     font-weight: bold;
     border-radius: 4px;
     font-size: 1.3rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     transition: .5s;
     font-family: var(--myfont);
 }
@@ -173,7 +173,7 @@ header .sidenav{
         font-size: 1.4rem;
     }
     
-    header nav label a{
+    /* header nav label a{
         letter-spacing: -1px;
-    }
+    } */
 }
