@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructor Portal</title>
     <link rel="stylesheet" href="../../bootstrap5/css/all.css">
+    <link rel="stylesheet" href="styles/admin-dashboard.css">
     <link rel="stylesheet" href="styles/instructor-dashboard.css">
 </head>
 <body>
@@ -22,10 +23,12 @@
 
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
-        <div class="logo">
-            <span class="logo-icon"><i class="fa-solid fa-user-tie"></i></span>
-            <span class="logo-text">Instructor Portal</span>
-        </div>
+        <a href="instructors-portal.html">
+            <div class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-user-tie"></i></span>
+                <span class="logo-text">Instructor Portal</span>
+            </div>
+        </a>
         <ul class="nav-menu">
             <li class="nav-item">
                 <a href="instructors-portal.html" class="nav-link active">
@@ -41,16 +44,16 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="student-bookings.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-code-pull-request"></i></span>
+                    <span class="nav-text">Student Bookings</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="inventory-management.html" class="nav-link">
                     <span class="nav-icon"><i class="fa-solid fa-truck-moving"></i></span>
                     <span class="nav-text">Inventory</span>
                     <span class="admin-badge">Admin</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <span class="nav-icon"><i class="fa-solid fa-code-pull-request"></i></span>
-                    <span class="nav-text">Bookings</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -62,7 +65,7 @@
             <li class="nav-item">
                 <a href="settings.html" class="nav-link">
                     <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
-                    <span class="nav-text">System Settings</span>
+                    <span class="nav-text">Settings</span>
                     <span class="admin-badge">Admin</span>
                 </a>
             </li>
@@ -81,9 +84,10 @@
 
         <!-- Action Buttons -->
         <div class="action-bar">
-            <div class="search-box">
-                <input type="text" class="form-control" placeholder="Search manuals...">
-            </div>
+            <form action="#" method="get" class="search-box">
+                <input type="text" class="form-control" placeholder="Use code to search...">
+                <button class="btn btn-primary">Search</button>
+            </form>
             <button class="btn btn-primary" id="addManualBtn">
                 <span>+ Add New Manual</span>
             </button>
@@ -94,10 +98,9 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
+                        <th>Code</th>
                         <th>Title</th>
-                        <th>Subject</th>
-                        <th>Author</th>
-                        <th>Edition</th>
                         <th>Total Copies</th>
                         <th>Available</th>
                         <th>Status</th>
@@ -106,10 +109,9 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
+                        <td>CHM 112</td>
                         <td>Chemistry Lab Manual</td>
-                        <td>Chemistry</td>
-                        <td>Dr. Smith</td>
-                        <td>5th</td>
                         <td>15</td>
                         <td>8</td>
                         <td><span class="status status-available">Available</span></td>
@@ -119,10 +121,9 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>2</td>
+                        <td>PHY 212</td>
                         <td>Physics Experiments</td>
-                        <td>Physics</td>
-                        <td>Prof. Johnson</td>
-                        <td>3rd</td>
                         <td>10</td>
                         <td>2</td>
                         <td><span class="status status-booked">Low Stock</span></td>
@@ -132,10 +133,9 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>3</td>
+                        <td>BLY 321</td>
                         <td>Biology Field Guide</td>
-                        <td>Biology</td>
-                        <td>Dr. Williams</td>
-                        <td>2nd</td>
                         <td>8</td>
                         <td>0</td>
                         <td><span class="status status-maintenance">Out of Stock</span></td>
@@ -145,10 +145,9 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>4</td>
+                        <td>ENG 212</td>
                         <td>Engineering Workshop</td>
-                        <td>Engineering</td>
-                        <td>Prof. Brown</td>
-                        <td>4th</td>
                         <td>12</td>
                         <td>5</td>
                         <td><span class="status status-available">Available</span></td>

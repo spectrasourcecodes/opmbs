@@ -92,6 +92,11 @@ body {
     overflow-y: auto;
 }
 
+.sidebar a{
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -251,6 +256,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
 }
 
 .btn {
@@ -480,8 +489,8 @@ tr:hover td {
         display: flex;
     }
 
-    .topbar h1 {
-        font-size: 1.2rem;
+    .page-title {
+        font-size: 1.1rem;
     }
 
     .user-profile span {

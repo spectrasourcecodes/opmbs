@@ -10,10 +10,12 @@
 <body>
     <!-- Mobile Header -->
     <header class="mobile-header">
-        <div class="mobile-logo">
-            <span class="mobile-logo-icon"><i class="fa-solid fa-book"></i></span>
-            <span id="tittle">Spectra Lapbook Pro</span>
-        </div>
+        <a href="admin-portal.html">
+            <div class="mobile-logo">
+                <span class="mobile-logo-icon"><i class="fa-solid fa-book"></i></span>
+                <span id="tittle">Spectra Lapbook Pro</span>
+            </div>
+        </a>
         <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
     </header>
 
@@ -22,14 +24,15 @@
 
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
-        <div class="logo">
-    <link rel="stylesheet" href="../bootstrap5/css/all.css">
-            <span class="logo-icon"><i class="fa-solid fa-user-secret"></i></span>
-            <span class="logo-text">Admin Portal</span>
-        </div>
+        <a href="admin-portal.html">
+            <div class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-user-secret"></i></span>
+                <span class="logo-text">Admin Portal</span>
+            </div>
+        </a>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="admin-potal.html" class="nav-link active">
+                <a href="admin-portal.html" class="nav-link active">
                     <span class="nav-icon"><i class="fa-solid fa-dashboard"></i></span>
                     <span class="nav-text">Dashboard</span>
                 </a>
@@ -49,7 +52,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="student-bookings.html" class="nav-link">
                     <span class="nav-icon"><i class="fa-solid fa-code-pull-request"></i></span>
                     <span class="nav-text">Bookings</span>
                 </a>
@@ -75,8 +78,8 @@
         <div class="topbar">
             <h1 class="page-title">Users Management</h1>
             <div class="user-profile">
-                <span>Admin User</span>
-                <div class="user-avatar">AD</div>
+                <span>Yahaya Abdulbari</span>
+                <div class="user-avatar">YA</div>
             </div>
         </div>
 
@@ -104,9 +107,10 @@
 
         <!-- Action Buttons -->
         <div class="action-bar">
-            <div class="search-box">
-                <input type="text" class="form-control" placeholder="Search users...">
-            </div>
+            <form action="#" method="get" class="search-box">
+                <input type="text" class="form-control" placeholder="Use email to search...">
+                <button class="btn btn-primary">Search</button>
+            </form>
             <div>
                 <button class="btn btn-outline">
                     <span>Export</span>

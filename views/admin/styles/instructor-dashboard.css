@@ -217,6 +217,10 @@ body {
     margin-bottom: 20px;
 }
 
+.search-box {
+    display: flex;
+}
+
 .btn {
     padding: 8px 15px;
     border-radius: 6px;
@@ -443,8 +447,8 @@ tr:hover td {
         display: flex;
     }
 
-    .topbar h1 {
-        font-size: 1.2rem;
+    .page-title {
+        font-size: 1.1rem;
     }
 
     .user-profile span {

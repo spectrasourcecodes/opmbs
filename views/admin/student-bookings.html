@@ -11,70 +11,85 @@
         <div class="page-header">
             <h1 class="page-title">Students Bookings</h1>
             <div class="action-bar">
-                <button class="btn btn-primary" id="addStockBtn">+ Add New Student</button>
+                <button class="btn btn-primary" id="addStockBtn">+ Add New Record</button>
                 <button class="btn btn-outline">print</button>
             </div>
         </div>
 
-        <div class="search-filter">
+        <form action="#" method="post" class="search-filter">
             <div class="search-box">
                 <span class="search-icon">🔍</span>
                 <input type="text" class="search-input" placeholder="Search inventory...">
             </div>
             <select class="form-control" style="max-width: 200px;">
-                <option>All Categories</option>
-                <option>Chemistry</option>
-                <option>Physics</option>
-                <option>Biology</option>
-                <option>Engineering</option>
+                <option>CSC 419</option>
+                <option>CSC 316</option>
+                <option>CSC 312</option>
+                <option>CHM 112</option>
+                <option>PHY 213</option>
+                <option>BLY 321</option>
+                <option>CSC 121</option>
             </select>
-        </div>
+            <button class="btn btn-primary">🔍 Search</button>
+        </form>
 
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Manual</th>
+                        <th>S/N</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email Address</th>
+                        <th>Department</th>
+                        <th>Matric Number</th>
+                        <th>Level</th>
                         <th>Category</th>
-                        <th>Total Stock</th>
-                        <th>Available</th>
-                        <th>Booked Out</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Chemistry Lab Manual</td>
-                        <td><span class="badge badge-primary">Chemistry</span></td>
-                        <td>15</td>
-                        <td>8</td>
-                        <td>7</td>
-                        <td><span class="status status-available">Available</span></td>
+                        <td>1</td>
+                        <td>Yahaya</td>
+                        <td>Abdulbari</td>
+                        <td>yahayaabdulbari13@gmail.com</td>
+                        <td>Computer science</td>
+                        <td>2020/CP/CSC/0116</td>
+                        <td>400l</td>
+                        <td><span class="badge badge-primary">CCS 413</span></td>
+                        <td><span class="status status-available">Approved</span></td>
                         <td>
-                            <button class="btn btn-outline">Adjust</button>
+                            <button class="btn btn-outline">Decline</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Physics Experiments</td>
-                        <td><span class="badge badge-primary">Physics</span></td>
-                        <td>10</td>
                         <td>2</td>
-                        <td>8</td>
-                        <td><span class="status status-low">Low Stock</span></td>
+                        <td>Sulaiman</td>
+                        <td>Zubairu</td>
+                        <td>teaskid419@gmail.com</td>
+                        <td>Computer science</td>
+                        <td>2020/CP/CSC/0014</td>
+                        <td>400l</td>
+                        <td><span class="badge badge-primary">CCS 413</span></td>
+                        <td><span class="status status-available">Approved</span></td>
                         <td>
-                            <button class="btn btn-outline">Adjust</button>
+                            <button class="btn btn-outline">Decline</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Biology Field Guide</td>
-                        <td><span class="badge badge-primary">Biology</span></td>
-                        <td>8</td>
-                        <td>0</td>
-                        <td>8</td>
-                        <td><span class="status status-out">Out of Stock</span></td>
+                        <td>3</td>
+                        <td>Ismail</td>
+                        <td>Muhammad</td>
+                        <td>ismailmuhammedabdullaziz@gmail.com</td>
+                        <td>Computer science</td>
+                        <td>2020/CP/CSC/0119</td>
+                        <td>400l</td>
+                        <td><span class="badge badge-primary">CCS 413</span></td>
+                        <td><span class="status status-low">Pending</span></td>
                         <td>
-                            <button class="btn btn-outline">Adjust</button>
+                            <button class="btn btn-outline">Request</button>
                         </td>
                     </tr>
                 </tbody>
@@ -87,7 +102,7 @@
         <div class="modal">
             <form action="#" method="post">
                 <div class="modal-header">
-                    <h3 class="modal-title">Add New Student</h3>
+                    <h3 class="modal-title">Add New Record</h3>
                     <button class="modal-close" id="closeModal" type="button">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -124,7 +139,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-outline" id="cancel-modal" type="button">Cancel</button>
-                    <button class="btn btn-primary" type="submit">Add Stock</button>
+                    <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
             </form>
         </div>
