@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="styles/inventory-management.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Inventory Management</h1>
+            <div class="action-bar">
+                <button class="btn btn-primary" id="addStockBtn">+ Add Stock</button>
+                <button class="btn btn-outline">Export</button>
+            </div>
+        </div>
+
+        <div class="search-filter">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Search inventory...">
+            </div>
+            <select class="form-control" style="max-width: 200px;">
+                <option>All Categories</option>
+                <option>Chemistry</option>
+                <option>Physics</option>
+                <option>Biology</option>
+                <option>Engineering</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Manual</th>
+                        <th>Category</th>
+                        <th>Total Stock</th>
+                        <th>Available</th>
+                        <th>Booked Out</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chemistry Lab Manual</td>
+                        <td><span class="badge badge-primary">Chemistry</span></td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td><span class="status status-available">Available</span></td>
+                        <td>
+                            <button class="btn btn-outline">Adjust</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Physics Experiments</td>
+                        <td><span class="badge badge-primary">Physics</span></td>
+                        <td>10</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td><span class="status status-low">Low Stock</span></td>
+                        <td>
+                            <button class="btn btn-outline">Adjust</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Biology Field Guide</td>
+                        <td><span class="badge badge-primary">Biology</span></td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>8</td>
+                        <td><span class="status status-out">Out of Stock</span></td>
+                        <td>
+                            <button class="btn btn-outline">Adjust</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Stock Modal -->
+    <div class="modal-overlay" id="addStockModal">
+        <div class="modal">
+            <form action="#" method="post">
+                <div class="modal-header">
+                    <h3 class="modal-title">Add New Stock</h3>
+                    <button class="modal-close" id="closeModal" type="button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">Select Manual</label>
+                        <select class="form-control">
+                            <option>Chemistry Lab Manual</option>
+                            <option>Physics Experiments</option>
+                            <option>Biology Field Guide</option>
+                            <option>Engineering Workshop</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Quantity to Add</label>
+                        <input type="number" class="form-control" placeholder="Enter quantity">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Condition</label>
+                        <select class="form-control">
+                            <option>New</option>
+                            <option>Good</option>
+                            <option>Fair</option>
+                            <option>Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Location</label>
+                        <input type="text" class="form-control" placeholder="Enter storage location">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Notes</label>
+                        <textarea class="form-control" rows="3" placeholder="Any additional notes"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline" id="cancel-modal" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Add Stock</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Modal functionality
+            const addStockBtn = document.getElementById('addStockBtn');
+            const addStockModal = document.getElementById('addStockModal');
+            const closeModal = document.getElementById('closeModal');
+            const cancelModal = document.getElementById('cancel-modal');
+            
+            addStockBtn.addEventListener('click', function() {
+                addStockModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                addStockModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            cancelModal.addEventListener('click', function() {
+                addStockModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close modal when clicking outside
+            addStockModal.addEventListener('click', function(e) {
+                if (e.target === addStockModal) {
+                    addStockModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && addStockModal.classList.contains('active')) {
+                    addStockModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

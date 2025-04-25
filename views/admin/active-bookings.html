@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Bookings - Library System</title>
+    <link rel="stylesheet" href="styles/active-booking.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Active Bookings</h2>
+        
+        <div class="card">
+            <div class="card-header bg-info">
+                <h4 class="mb-0">Currently Checked Out Manuals (<%- activeBookings.length %>)</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Manual Title</th>
+                                <th>User</th>
+                                <th>Checkout Date</th>
+                                <th>Due Date</th>
+                                <th>Days Remaining</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% activeBookings.forEach(booking => { 
+                                const dueDate = new Date(booking.due_date);
+                                const today = new Date();
+                                const timeDiff = dueDate.getTime() - today.getTime();
+                                const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                            %>
+                            <tr>
+                                <td><%- booking.id %></td>
+                                <td><%- booking.manual_title %></td>
+                                <td><%- booking.user_name %></td>
+                                <td><%- new Date(booking.checkout_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
+                                <td><%- new Date(booking.due_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
+                                <td>
+                                    <span class="badge <%- daysRemaining < 3 ? 'bg-warning' : 'bg-success' %>">
+                                        <%- daysRemaining > 0 ? `${daysRemaining} days` : 'Due today' %>
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary return-btn" data-booking-id="<%- booking.id %>">
+                                        Return
+                                    </button>
+                                </td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-3">
+            <a href="report.html" class="btn btn-secondary">Back to Analysis</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.return-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const bookingId = this.getAttribute('data-booking-id');
+                    if (confirm('Are you sure you want to mark this manual as returned?')) {
+                        window.location.href = `/return-manual?id=${bookingId}`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

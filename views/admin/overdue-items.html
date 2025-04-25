@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdue Items - Library System</title>
+    <link rel="stylesheet" href="styles/admin/active-booking.css">
+    <link rel="stylesheet" href="styles/overdue.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Overdue Manuals</h2>
+        
+        <div class="card">
+            <div class="card-header bg-danger">
+                <h4 class="mb-0">Overdue Manuals (<%- overdueItems.length %>)</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Manual Title</th>
+                                <th>User</th>
+                                <th>Checkout Date</th>
+                                <th>Due Date</th>
+                                <th>Days Overdue</th>
+                                <th>Fine</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% overdueItems.forEach(item => { 
+                                const dueDate = new Date(item.due_date);
+                                const today = new Date();
+                                const timeDiff = today.getTime() - dueDate.getTime();
+                                const daysOverdue = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                                const fine = Math.min(daysOverdue * 0.5, 10);
+                            %>
+                            <tr>
+                                <td><%- item.id %></td>
+                                <td><%- item.manual_title %></td>
+                                <td><%- item.user_name %></td>
+                                <td><%- new Date(item.checkout_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
+                                <td><%- new Date(item.due_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
+                                <td>
+                                    <span class="badge bg-danger">
+                                        <%- daysOverdue %> day<%- daysOverdue !== 1 ? 's' : '' %>
+                                    </span>
+                                </td>
+                                <td>$<%- fine.toFixed(2) %></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm return-btn" data-booking-id="<%- item.id %>">
+                                        Return
+                                    </button>
+                                    <button class="btn btn-warning btn-sm remind-btn" data-user-id="<%- item.user_id %>">
+                                        Remind
+                                    </button>
+                                </td>
+                            </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-3">
+            <a href="report.html" class="btn btn-secondary">Back to Analysis</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Return button handler
+            document.querySelectorAll('.return-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const bookingId = this.getAttribute('data-booking-id');
+                    if (confirm('Are you sure you want to mark this manual as returned?')) {
+                        window.location.href = `/return-manual?id=${bookingId}`;
+                    }
+                });
+            });
+            
+            // Remind button handler
+            document.querySelectorAll('.remind-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const userId = this.getAttribute('data-user-id');
+                    if (confirm('Send reminder email to this user about their overdue manual?')) {
+                        window.location.href = `/send-reminder?user_id=${userId}`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

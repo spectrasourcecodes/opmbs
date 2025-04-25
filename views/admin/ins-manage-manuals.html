@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Portal</title>
+    <link rel="stylesheet" href="../../bootstrap5/css/all.css">
+    <link rel="stylesheet" href="styles/instructor-dashboard.css">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-logo">
+            <span class="mobile-logo-icon"><i class="fa-solid fa-book"></i></span>
+            <span id="tittle">Spectra Lapbook Pro</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-user-tie"></i></span>
+            <span class="logo-text">Instructor Portal</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="instructors-portal.html" class="nav-link active">
+                    <span class="nav-icon"><i class="fa-solid fa-dashboard"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="ins-manage-manuals.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-book"></i></span>
+                    <span class="nav-text">Manage Manuals</span>
+                    <span class="admin-badge">Admin</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="inventory-management.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-truck-moving"></i></span>
+                    <span class="nav-text">Inventory</span>
+                    <span class="admin-badge">Admin</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-code-pull-request"></i></span>
+                    <span class="nav-text">Bookings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="report.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-simple"></i></span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                    <span class="nav-text">System Settings</span>
+                    <span class="admin-badge">Admin</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="topbar">
+            <h1 class="page-title">Manual Management</h1>
+            <div class="user-profile">
+                <span>Dr. Instructor</span>
+                <div class="user-avatar">DI</div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-bar">
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Search manuals...">
+            </div>
+            <button class="btn btn-primary" id="addManualBtn">
+                <span>+ Add New Manual</span>
+            </button>
+        </div>
+
+        <!-- Manuals Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Subject</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                        <th>Total Copies</th>
+                        <th>Available</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chemistry Lab Manual</td>
+                        <td>Chemistry</td>
+                        <td>Dr. Smith</td>
+                        <td>5th</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td><span class="status status-available">Available</span></td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="inventory-management.html"><button class="btn btn-outline">Inventory</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Physics Experiments</td>
+                        <td>Physics</td>
+                        <td>Prof. Johnson</td>
+                        <td>3rd</td>
+                        <td>10</td>
+                        <td>2</td>
+                        <td><span class="status status-booked">Low Stock</span></td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="inventory-management.html"><button class="btn btn-outline">Inventory</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Biology Field Guide</td>
+                        <td>Biology</td>
+                        <td>Dr. Williams</td>
+                        <td>2nd</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td><span class="status status-maintenance">Out of Stock</span></td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="inventory-management.html"><button class="btn btn-outline">Inventory</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Engineering Workshop</td>
+                        <td>Engineering</td>
+                        <td>Prof. Brown</td>
+                        <td>4th</td>
+                        <td>12</td>
+                        <td>5</td>
+                        <td><span class="status status-available">Available</span></td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="inventory-management.html"><button class="btn btn-outline">Inventory</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Add Manual Modal -->
+    <div class="modal-overlay" id="addManualModal">
+        <div class="modal">
+            <form method="post" action="#">
+                <div class="modal-header">
+                    <h3 class="modal-title">Add New Manual</h3>
+                    <button class="modal-close" id="closeModal" type="button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">Manual Title</label>
+                        <input type="text" class="form-control" placeholder="Enter manual title" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <select class="form-control" required>
+                            <option>Chemistry</option>
+                            <option>Physics</option>
+                            <option>Biology</option>
+                            <option>Engineering</option>
+                            <option>Mathematics</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Author</label>
+                        <input type="text" class="form-control" placeholder="Enter author name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Edition</label>
+                        <input type="text" class="form-control" placeholder="Enter edition number" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ISBN</label>
+                        <input type="text" class="form-control" placeholder="Enter ISBN" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Total Copies</label>
+                        <input type="number" class="form-control" placeholder="Enter number of copies" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter manual description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Upload Cover Image</label>
+                        <input type="file" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline" type="button" id="cancel-modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Save Manual</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                sidebar.classList.add('show');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            sidebarOverlay.addEventListener('click', function() {
+                sidebar.classList.remove('show');
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Modal functionality
+            const addManualBtn = document.getElementById('addManualBtn');
+            const addManualModal = document.getElementById('addManualModal');
+            const closeModal = document.getElementById('closeModal');
+            const cancelModal = document.getElementById('cancel-modal');
+            
+            addManualBtn.addEventListener('click', function() {
+                addManualModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                addManualModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+
+            cancelModal.addEventListener('click', function() {
+                addManualModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close modals when clicking outside
+            [addManualModal].forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    addManualModal.classList.remove('active');
+                    sidebar.classList.remove('show');
+                    sidebarOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

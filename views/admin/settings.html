@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings</title>
+    <link rel="stylesheet" href="styles/settings.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">System Settings</h1>
+            <p class="page-description">Configure system preferences and options</p>
+        </div>
+
+        <div class="settings-tabs">
+            <div class="tab active">General</div>
+            <div class="tab">Booking Rules</div>
+            <div class="tab">Notifications</div>
+            <div class="tab">User Permissions</div>
+            <div class="tab">System Maintenance</div>
+        </div>
+
+        <div class="settings-section">
+            <h2 class="section-title">General Settings</h2>
+            
+            <div class="form-group">
+                <label class="form-label">Institution Name</label>
+                <input type="text" class="form-control" value="University of Technology">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="form-group">
+                        <label class="form-label">Default Booking Duration (days)</label>
+                        <input type="number" class="form-control" value="7">
+                    </div>
+                </div>
+                <div class="form-col">
+                    <div class="form-group">
+                        <label class="form-label">Max Renewals Allowed</label>
+                        <input type="number" class="form-control" value="2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">System Timezone</label>
+                <select class="form-control">
+                    <option>(UTC+00:00) London</option>
+                    <option>(UTC-05:00) Eastern Time</option>
+                    <option selected>(UTC+01:00) Paris</option>
+                    <option>(UTC+08:00) Singapore</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2 class="section-title">Feature Toggles</h2>
+            
+            <div class="form-group">
+                <label class="toggle-label">
+                    <span>Enable Online Booking</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </label>
+                <p class="form-text">Allow students to book manuals through the online system</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="toggle-label">
+                    <span>Enable Automatic Renewals</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </label>
+                <p class="form-text">Allow students to automatically renew their bookings if available</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="toggle-label">
+                    <span>Enable Waitlisting</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </label>
+                <p class="form-text">Allow students to join waitlists for unavailable manuals</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="toggle-label">
+                    <span>Require Approval for Bookings</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </label>
+                <p class="form-text">Instructors must approve student booking requests</p>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2 class="section-title">Danger Zone</h2>
+            
+            <div class="form-group">
+                <label class="form-label">Export System Data</label>
+                <p class="form-text">Create a backup of all system data including users, manuals, and bookings</p>
+                <button class="btn btn-outline">Export Data</button>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Reset Demo Data</label>
+                <p class="form-text">Clear all test data and restore sample records (demo mode only)</p>
+                <button class="btn btn-outline">Reset Demo Data</button>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">System Maintenance Mode</label>
+                <p class="form-text">Take the system offline for maintenance (admin access only)</p>
+                <button class="btn btn-danger">Enable Maintenance Mode</button>
+            </div>
+        </div>
+
+        <div class="settings-footer">
+            <button class="btn btn-outline">Discard Changes</button>
+            <button class="btn btn-primary">Save Settings</button>
+        </div>
+    </div>
+</body>
+</html>

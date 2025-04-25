@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="../../bootstrap5/css/all.css">
+    <link rel="stylesheet" href="styles/admin-dashboard.css">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-logo">
+            <span class="mobile-logo-icon"><i class="fa-solid fa-book"></i></span>
+            <span id="tittle">Spectra Lapbook Pro</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+    <link rel="stylesheet" href="../bootstrap5/css/all.css">
+            <span class="logo-icon"><i class="fa-solid fa-user-secret"></i></span>
+            <span class="logo-text">Admin Portal</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="admin-potal.html" class="nav-link active">
+                    <span class="nav-icon"><i class="fa-solid fa-dashboard"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="adm-manage-manuals.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-book"></i></span>
+                    <span class="nav-text">Manage Manuals</span>
+                    <span class="admin-badge">Admin</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="inventory-management.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-truck-moving"></i></span>
+                    <span class="nav-text">Inventory</span>
+                    <span class="admin-badge">Admin</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-code-pull-request"></i></span>
+                    <span class="nav-text">Bookings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="report.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-chart-simple"></i></span>
+                    <span class="nav-text">Reports</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                    <span class="nav-text">System Settings</span>
+                    <span class="admin-badge">Admin</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="topbar">
+            <h1 class="page-title">Users Management</h1>
+            <div class="user-profile">
+                <span>Admin User</span>
+                <div class="user-avatar">AD</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="card-grid">
+            <div class="card">
+                <h3 class="card-title">Students Accounts</h3>
+                <p class="card-value">7653</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Instructors Accounts</h3>
+                <p class="card-value">7653</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Available Manuals</h3>
+                <p class="card-value">284</p>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <a href="#"><div class="tab active">Students</div></a>
+            <a href="#"><div class="tab">Instructors</div></a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-bar">
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Search users...">
+            </div>
+            <div>
+                <button class="btn btn-outline">
+                    <span>Export</span>
+                </button>
+                <button class="btn btn-primary" id="addUserBtn">
+                    <span>+ Add User</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Last Login</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ST1001</td>
+                        <td>John Student</td>
+                        <td>john.student@uni.edu</td>
+                        <td>Student</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td>2023-06-15 14:30</td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="#"><button class="btn btn-outline">Reset PW</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IN2001</td>
+                        <td>Dr. Sarah Instructor</td>
+                        <td>s.instructor@uni.edu</td>
+                        <td>Instructor</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td>2023-06-16 09:15</td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="#"><button class="btn btn-outline">Reset PW</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ST1002</td>
+                        <td>Emma Wilson</td>
+                        <td>emma.w@uni.edu</td>
+                        <td>Student</td>
+                        <td><span class="status status-inactive">Inactive</span></td>
+                        <td>2023-05-20 11:45</td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="#"><button class="btn btn-outline">Reset PW</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IN2002</td>
+                        <td>Prof. Michael Chen</td>
+                        <td>m.chen@uni.edu</td>
+                        <td>Instructor</td>
+                        <td><span class="status status-pending">Pending</span></td>
+                        <td>-</td>
+                        <td>
+                            <button class="btn btn-outline">Edit</button>
+                            <button class="btn btn-outline">Approve</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AD3001</td>
+                        <td>Admin User</td>
+                        <td>admin@uni.edu</td>
+                        <td>Administrator</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td>2023-06-16 16:20</td>
+                        <td>
+                            <a href="#"><button class="btn btn-outline">Edit</button></a>
+                            <a href="#"><button class="btn btn-outline">Reset PW</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Add User Modal -->
+    <div class="modal-overlay" id="addUserModal">
+        <div class="modal">
+            <form action="#">
+                <div class="modal-header">
+                    <h3 class="modal-title">Add New User</h3>
+                    <button class="modal-close" id="closeModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">User Type</label>
+                        <select class="form-control" required required>
+                            <option>Student</option>
+                            <option>Instructor</option>
+                            <option selected>Administrator</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="Enter first name" required required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Enter last name" required required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter email address" required required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Department</label>
+                        <select class="form-control" required>
+                            <option>Chemistry</option>
+                            <option>Physics</option>
+                            <option>Biology</option>
+                            <option>Engineering</option>
+                            <option>Administration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Initial Password</label>
+                        <input type="password" class="form-control" placeholder="Enter temporary password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Status</label>
+                        <select class="form-control" required>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                            <option>Pending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline" type="button" id="cancel-modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Create User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script/adm-dashboard.js"></script>
+</body>
+</html>

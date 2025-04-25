@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student section</title>
+    <link rel="stylesheet" href="../../bootstrap5/css/all.css">
+    <link rel="stylesheet" href="styles/student-dashboard.css">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="dashboard.html">
+            <div class="mobile-logo">
+            <span class="mobile-logo-icon"><i class="fa-solid fa-book"></i></span>
+            <span id="tittle">Spectra Lapbook Pro</span>
+        </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-user-graduate"></i></span>
+            <span class="logo-text">Student Portal</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="dashboard.html" class="nav-link active">
+                    <span class="nav-icon"><i class="fa-solid fa-dashboard"></i></span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="browse-manual.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-search"></i></span>
+                    <span class="nav-text">Browse Manuals</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="my-bookings.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-book"></i></span>
+                    <span class="nav-text">Approved Request</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="my-bookings.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-recycle"></i></span>
+                    <span class="nav-text">pending Request</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="settings.html" class="nav-link">
+                    <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="topbar">
+            <h1 class="page-title">Dashboard</h1>
+            <div class="user-profile">
+                <span>John Student</span>
+                <div class="user-avatar">JS</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="card-grid">
+            <div class="card">
+                <h3 class="card-title">Active Bookings</h3>
+                <p class="card-value">3</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Available Manuals</h3>
+                <p class="card-value">24</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Overdue Items</h3>
+                <p class="card-value">0</p>
+            </div>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="search-filter">
+            <form action="#" method="post">
+                <div class="search-box">
+                    <span class="search-icon"><i class="fa-solid fa-search"></i></span>
+                    <input type="text" class="search-input" placeholder="Search manuals...">
+                </div>
+                <button class="btn btn-outline">
+                    <span>Filters</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Manuals Table -->
+        <div class="manuals-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Edition</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>CHM 012</td>
+                        <td>Chemistry Lab Manual</td>
+                        <td>5th</td>
+                        <td><span class="status status-available">Available</span></td>
+                        <td>
+                            <button class="btn btn-primary">Book</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>PHY 232</td>
+                        <td>Physics Experiments</td>
+                        <td>3rd</td>
+                        <td><span class="status status-available">Available</span></td>
+                        <td>
+                            <button class="btn btn-primary">Book</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>BLY 112</td>
+                        <td>Biology Field Guide</td>
+                        <td>2nd</td>
+                        <td><span class="status status-booked">Booked</span></td>
+                        <td>
+                            <button class="btn btn-outline">Waitlist</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Reports</title>
+    <link rel="stylesheet" href="styles/report.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">System Reports</h1>
+            <p class="page-description">View and analyze system usage, bookings, and inventory data</p>
+        </div>
+
+        <div class="report-cards">
+            <div class="report-card">
+                <h3 class="report-card-title">Total Manuals</h3>
+                <div class="report-card-value">42</div>
+                <div class="report-card-details">Across all categories</div>
+                <a href="total-manuals.html" class="report-card-link">View Details →</a>
+            </div>
+            <div class="report-card">
+                <h3 class="report-card-title">Active Bookings</h3>
+                <div class="report-card-value">127</div>
+                <div class="report-card-details">Currently checked out</div>
+                <a href="active-bookings.html" class="report-card-link">View Details →</a>
+            </div>
+            <div class="report-card">
+                <h3 class="report-card-title">Overdue Items</h3>
+                <div class="report-card-value">8</div>
+                <div class="report-card-details">Past return date</div>
+                <a href="overdue-items.html" class="report-card-link">View Details →</a>
+            </div>
+        </div>
+
+        <div class="report-section">
+            <h2 class="section-title">Usage Statistics</h2>
+            
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label class="filter-label">Time Period</label>
+                    <select class="filter-control">
+                        <option>Last 7 days</option>
+                        <option selected>Last 30 days</option>
+                        <option>Last 90 days</option>
+                        <option>This Semester</option>
+                        <option>Custom Range</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Category</label>
+                    <select class="filter-control">
+                        <option>All Categories</option>
+                        <option>Chemistry</option>
+                        <option>Physics</option>
+                        <option>Biology</option>
+                        <option>Engineering</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Manual</label>
+                    <select class="filter-control">
+                        <option>All Manuals</option>
+                        <option>Chemistry Lab Manual</option>
+                        <option>Physics Experiments</option>
+                        <option>Biology Field Guide</option>
+                    </select>
+                </div>
+                <div class="filter-group" style="align-self: flex-end;">
+                    <button class="btn btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                [Usage Chart Would Appear Here]
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Manual</th>
+                            <th>Category</th>
+                            <th>Total Bookings</th>
+                            <th>Avg. Duration</th>
+                            <th>Peak Usage</th>
+                            <th>Utilization Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chemistry Lab Manual</td>
+                            <td>Chemistry</td>
+                            <td>84</td>
+                            <td>5.2 days</td>
+                            <td>Mon, 10-12 AM</td>
+                            <td>78%</td>
+                        </tr>
+                        <tr>
+                            <td>Physics Experiments</td>
+                            <td>Physics</td>
+                            <td>67</td>
+                            <td>4.8 days</td>
+                            <td>Tue, 2-4 PM</td>
+                            <td>65%</td>
+                        </tr>
+                        <tr>
+                            <td>Biology Field Guide</td>
+                            <td>Biology</td>
+                            <td>52</td>
+                            <td>6.1 days</td>
+                            <td>Wed, 9-11 AM</td>
+                            <td>58%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="report-section">
+            <h2 class="section-title">Inventory Reports</h2>
+            
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label class="filter-label">Report Type</label>
+                    <select class="filter-control">
+                        <option>Current Inventory</option>
+                        <option>Low Stock Alerts</option>
+                        <option>Damage/Loss Reports</option>
+                        <option>Acquisition History</option>
+                    </select>
+                </div>
+                <div class="filter-group" style="align-self: flex-end;">
+                    <button class="btn btn-primary">Generate Report</button>
+                </div>
+                <div class="filter-group" style="align-self: flex-end; margin-left: auto;">
+                    <button class="btn btn-outline">Export to Excel</button>
+                    <button class="btn btn-outline">Print</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Manual</th>
+                            <th>Total Copies</th>
+                            <th>Available</th>
+                            <th>Booked Out</th>
+                            <th>Under Repair</th>
+                            <th>Lost/Damaged</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chemistry Lab Manual</td>
+                            <td>15</td>
+                            <td>8</td>
+                            <td>7</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Physics Experiments</td>
+                            <td>10</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Biology Field Guide</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

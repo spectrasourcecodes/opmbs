@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Library Portal</title>
+    <link rel="stylesheet" href="styles/settings.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Account Settings</h2>
+        </div>
+        
+        <% if (successMessage) { %>
+        <div class="alert alert-success">
+            <%= successMessage %>
+        </div>
+        <% } %>
+        
+        <% if (errorMessage) { %>
+        <div class="alert alert-danger">
+            <%= errorMessage %>
+        </div>
+        <% } %>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="profile">Profile</div>
+            <div class="tab" data-tab="security">Security</div>
+            <div class="tab" data-tab="notifications">Notifications</div>
+        </div>
+        
+        <div class="tab-content active" id="profile-settings">
+            <form action="/update-profile" method="POST">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">Personal Information</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="avatar-container">
+                            <div class="user-avatar"><%= userInitials %></div>
+                            <div class="avatar-upload">
+                                <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('avatar-upload').click()">
+                                    Change Avatar
+                                </button>
+                                <small>JPG, GIF or PNG. Max size 2MB</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" value="<%= user.name %>" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" value="<%= user.email %>" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" value="<%= user.phone || '' %>">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Mailing Address</label>
+                            <textarea id="address" name="address" class="form-control" rows="3"><%= user.address || '' %></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="tab-content" id="security-settings">
+            <form action="/update-password" method="POST">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">Password & Security</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" name="current_password" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="registerPassword" name="new_password" class="form-control" required>
+                            <!-- password strength -->
+                            <div class="password-strength">
+                                <span id="strength-text">Password strength: weak</span>
+                                <div class="strength-bar">
+                                    <div class="strength-fill" id="strength-fill"></div>
+                                </div>
+                            </div>
+                            <!-- password strength -->
+                            <small class="text-muted">Minimum 8 characters with at least one number and one special character</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" name="confirm_password" class="form-control" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="card mt-4">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Danger Zone</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <h5>Delete Account</h5>
+                        <p>Once you delete your account, there is no going back. Please be certain.</p>
+                        <button type="button" class="btn btn-danger" onclick="confirmAccountDeletion()">
+                            Delete My Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="notification-settings">
+            <form action="/update-notifications" method="POST">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">Notification Preferences</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <h5>Email Notifications</h5>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="due_date_reminders" <%= user.notifications.due_date_reminders ? 'checked' : '' %>>
+                                Due date reminders
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="overdue_notices" <%= user.notifications.overdue_notices ? 'checked' : '' %>>
+                                Overdue notices
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="new_manuals" <%= user.notifications.new_manuals ? 'checked' : '' %>>
+                                New manual announcements
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="promotional" <%= user.notifications.promotional ? 'checked' : '' %>>
+                                Promotional emails
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h5>SMS Notifications</h5>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="sms_due_date" <%= user.notifications.sms_due_date ? 'checked' : '' %>>
+                                Due date reminders
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="sms_overdue" <%= user.notifications.sms_overdue ? 'checked' : '' %>>
+                                Overdue notices
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Preferences</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script/settings.js"></script>
+    <script src="script/pass-stregth.js"></script>
+</body>
+</html>

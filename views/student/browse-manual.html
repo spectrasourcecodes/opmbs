@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Manuals - Library System</title>
+    <link rel="stylesheet" href="styles/browse-manuals.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Browse Manuals</h2>
+            <div class="search-filter">
+                <div class="search-box">
+                    <i>🔍</i>
+                    <input type="text" id="search-input" placeholder="Search manuals..." value="<%= searchQuery || '' %>">
+                </div>
+                <select class="filter-select" id="category-filter">
+                    <option value="">All Categories</option>
+                    <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>" <%= selectedCategory == category.id ? 'selected' : '' %>>
+                        <%= category.name %>
+                    </option>
+                    <% }); %>
+                </select>
+                <select class="filter-select" id="availability-filter">
+                    <option value="all" <%= availabilityFilter === 'all' ? 'selected' : '' %>>All Statuses</option>
+                    <option value="available" <%= availabilityFilter === 'available' ? 'selected' : '' %>>Available Only</option>
+                </select>
+            </div>
+        </div>
+        
+        <% if (manuals.length > 0) { %>
+        <div class="manuals-grid">
+            <% manuals.forEach(manual => { %>
+            <div class="manual-card">
+                <div class="manual-image">
+                    <% if (manual.image_url) { %>
+                    <img src="<%= manual.image_url %>" alt="<%= manual.title %>" style="width:100%; height:100%; object-fit:cover;">
+                    <% } else { %>
+                    <div>📘</div>
+                    <% } %>
+                </div>
+                <div class="manual-body">
+                    <h3 class="manual-title"><%= manual.title %></h3>
+                    <div class="manual-meta">
+                        <span><strong>Author:</strong> <%= manual.author %></span>
+                        <span><strong>Category:</strong> <%= manual.category_name %></span>
+                        <span><strong>ISBN:</strong> <%= manual.isbn %></span>
+                    </div>
+                    <span class="manual-status <%= manual.status === 'Available' ? 'status-available' : 'status-unavailable' %>">
+                        <%= manual.status %>
+                    </span>
+                    <a href="/manual-details/<%= manual.id %>" class="btn btn-primary mt-3" style="width:100%; text-align:center;">
+                        <%= manual.status === 'Available' ? 'Check Out' : 'View Details' %>
+                    </a>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        
+        <% if (totalPages > 1) { %>
+        <div class="pagination">
+            <li class="page-item <%= currentPage == 1 ? 'disabled' : '' %>">
+                <a class="page-link" href="<%= buildPaginationLink(1) %>">First</a>
+            </li>
+            <li class="page-item <%= currentPage == 1 ? 'disabled' : '' %>">
+                <a class="page-link" href="<%= buildPaginationLink(currentPage - 1) %>">Previous</a>
+            </li>
+            
+            <% for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) { %>
+            <li class="page-item">
+                <a class="page-link <%= currentPage == i ? 'active' : '' %>" href="<%= buildPaginationLink(i) %>">
+                    <%= i %>
+                </a>
+            </li>
+            <% } %>
+            
+            <li class="page-item <%= currentPage == totalPages ? 'disabled' : '' %>">
+                <a class="page-link" href="<%= buildPaginationLink(currentPage + 1) %>">Next</a>
+            </li>
+            <li class="page-item <%= currentPage == totalPages ? 'disabled' : '' %>">
+                <a class="page-link" href="<%= buildPaginationLink(totalPages) %>">Last</a>
+            </li>
+        </div>
+        <% } %>
+        
+        <% } else { %>
+        <div class="no-results">
+            <div>📚</div>
+            <h3>No Manuals Found</h3>
+            <p>We couldn't find any manuals matching your criteria.</p>
+            <a href="/manuals" class="btn btn-primary">Reset Filters</a>
+        </div>
+        <% } %>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get filter elements
+            const searchInput = document.getElementById('search-input');
+            const categoryFilter = document.getElementById('category-filter');
+            const availabilityFilter = document.getElementById('availability-filter');
+            
+            // Function to update URL with filters
+            function updateFilters() {
+                const params = new URLSearchParams();
+                
+                if (searchInput.value) {
+                    params.set('search', searchInput.value);
+                }
+                
+                if (categoryFilter.value) {
+                    params.set('category', categoryFilter.value);
+                }
+                
+                if (availabilityFilter.value !== 'all') {
+                    params.set('availability', availabilityFilter.value);
+                }
+                
+                // Reset to first page when filters change
+                params.set('page', '1');
+                
+                window.location.href = '/manuals?' + params.toString();
+            }
+            
+            // Add event listeners
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    updateFilters();
+                }
+            });
+            
+            categoryFilter.addEventListener('change', updateFilters);
+            availabilityFilter.addEventListener('change', updateFilters);
+            
+            // Debounce search input to prevent too many requests
+            let searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(updateFilters, 500);
+            });
+        });
+    </script>
+</body>
+</html>
