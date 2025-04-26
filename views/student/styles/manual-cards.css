@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary-color: #f3f4f6;
+    --text-color: #111827;
+    --text-light: #6b7280;
+    --bg-color: #ffffff;
+    --border-color: #e5e7eb;
+    --sidebar-bg: #1e293b;
+    --sidebar-text: #f8fafc;
+    --sidebar-hover: #334155;
+    --sidebar-active: #0f172a;
+    --sidebar-width: 260px;
+    --mobile-header-height: 60px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.manuals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 0px;
+}
+
+.manual-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.manual-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.course-code {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.course-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.book-btn-container {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-left: 1px solid #eee;
+}
+
+.book-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.book-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.cancel-booking {
+    color: var(--bg-color);
+    background-color: rgba(250, 51, 51, 0.863);
+}
+.cancel-booking:hover {
+    color: var(--bg-color);
+    background-color: rgba(255, 0, 0, 0.938);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .manuals-grid {
+        grid-template-columns: 1fr;
+        max-height: 70vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .manual-card {
+        padding: 12px;
+    }
+
+    .course-title {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .book-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Scrollbar styling */
+.manuals-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.manuals-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.manuals-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.manuals-grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
