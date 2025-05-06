@@ -127,7 +127,8 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Status</th>
@@ -137,9 +138,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>ST1001</td>
-                        <td>John Student</td>
-                        <td>john.student@uni.edu</td>
+                        <td>1</td>
+                        <td>Yahaya</td>
+                        <td>Abdulbari</td>
+                        <td>yahyaabdulbari@gmail.com</td>
                         <td>Student</td>
                         <td><span class="status status-active">Active</span></td>
                         <td>2023-06-15 14:30</td>
@@ -149,48 +151,39 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>IN2001</td>
-                        <td>Dr. Sarah Instructor</td>
-                        <td>s.instructor@uni.edu</td>
-                        <td>Instructor</td>
-                        <td><span class="status status-active">Active</span></td>
-                        <td>2023-06-16 09:15</td>
+                        <td>2</td>
+                        <td>Ismail</td>
+                        <td>Muhammad</td>
+                        <td>ismailmuhammad@gmail.com</td>
+                        <td>Student</td>
+                        <td><span class="status status-pending">Pending</span></td>
+                        <td>2023-06-15 14:30</td>
                         <td>
                             <a href="#"><button class="btn btn-outline">Edit</button></a>
                             <a href="#"><button class="btn btn-outline">Reset PW</button></a>
                         </td>
                     </tr>
                     <tr>
-                        <td>ST1002</td>
-                        <td>Emma Wilson</td>
-                        <td>emma.w@uni.edu</td>
+                        <td>3</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>johndoe@gmail.com</td>
                         <td>Student</td>
                         <td><span class="status status-inactive">Inactive</span></td>
-                        <td>2023-05-20 11:45</td>
+                        <td>2023-06-15 14:30</td>
                         <td>
                             <a href="#"><button class="btn btn-outline">Edit</button></a>
                             <a href="#"><button class="btn btn-outline">Reset PW</button></a>
                         </td>
                     </tr>
                     <tr>
-                        <td>IN2002</td>
-                        <td>Prof. Michael Chen</td>
-                        <td>m.chen@uni.edu</td>
-                        <td>Instructor</td>
-                        <td><span class="status status-pending">Pending</span></td>
-                        <td>-</td>
-                        <td>
-                            <button class="btn btn-outline">Edit</button>
-                            <button class="btn btn-outline">Approve</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AD3001</td>
-                        <td>Admin User</td>
-                        <td>admin@uni.edu</td>
-                        <td>Administrator</td>
+                        <td>4</td>
+                        <td>Sulaiman</td>
+                        <td>Zubairu</td>
+                        <td>teaskidzubairu@gmail.com</td>
+                        <td>Student</td>
                         <td><span class="status status-active">Active</span></td>
-                        <td>2023-06-16 16:20</td>
+                        <td>2023-06-15 14:30</td>
                         <td>
                             <a href="#"><button class="btn btn-outline">Edit</button></a>
                             <a href="#"><button class="btn btn-outline">Reset PW</button></a>
@@ -212,10 +205,9 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="form-label">User Type</label>
-                        <select class="form-control" required required>
+                        <select class="form-control" required>
                             <option>Student</option>
                             <option>Instructor</option>
-                            <option selected>Administrator</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -231,14 +223,24 @@
                         <input type="email" class="form-control" placeholder="Enter email address" required required>
                     </div>
                     <div class="form-group">
+                        <label class="form-label">Faculty</label>
+                        <input type="text" class="form-control" placeholder="Enter Faculty" required required>
+                    </div>
+                    <div class="form-group">
                         <label class="form-label">Department</label>
-                        <select class="form-control" required>
-                            <option>Chemistry</option>
-                            <option>Physics</option>
-                            <option>Biology</option>
-                            <option>Engineering</option>
-                            <option>Administration</option>
-                        </select>
+                        <input type="text" class="form-control" placeholder="Enter Department" required required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Matric Number</label>
+                        <input type="text" class="form-control" placeholder="Enter Matric Number" required required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="Enter Phone Number" required required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Department</label>
+                        <input type="text" class="form-control" placeholder="Enter Department" required required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Initial Password</label>

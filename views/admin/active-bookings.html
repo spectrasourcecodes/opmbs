@@ -12,7 +12,7 @@
         
         <div class="card">
             <div class="card-header bg-info">
-                <h4 class="mb-0">Currently Checked Out Manuals (<%- activeBookings.length %>)</h4>
+                <h4 class="mb-0">Currently Checked Out Manuals</h4>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -29,14 +29,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% activeBookings.forEach(booking => { 
+                            <!-- <% activeBookings.forEach(booking => { 
                                 const dueDate = new Date(booking.due_date);
                                 const today = new Date();
                                 const timeDiff = dueDate.getTime() - today.getTime();
                                 const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
-                            %>
+                            %> -->
                             <tr>
-                                <td><%- booking.id %></td>
+                                <!-- <td><%- booking.id %></td>
                                 <td><%- booking.manual_title %></td>
                                 <td><%- booking.user_name %></td>
                                 <td><%- new Date(booking.checkout_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
@@ -50,9 +50,9 @@
                                     <button class="btn btn-primary return-btn" data-booking-id="<%- booking.id %>">
                                         Return
                                     </button>
-                                </td>
+                                </td> -->
                             </tr>
-                            <% }); %>
+                            <!-- <% }); %> -->
                         </tbody>
                     </table>
                 </div>

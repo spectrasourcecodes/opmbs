@@ -12,7 +12,7 @@
         
         <div class="card">
             <div class="card-header">
-                <h4 class="mb-0">All Manuals (<%- manuals.length %>)</h4>
+                <h4 class="mb-0">All Manuals</h4>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -29,9 +29,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% manuals.forEach(manual => { %>
+                            <!-- <% manuals.forEach(manual => { %> -->
                             <tr>
-                                <td><%- manual.id %></td>
+                                <!-- <td><%- manual.id %></td>
                                 <td><%- manual.title %></td>
                                 <td><%- manual.author %></td>
                                 <td><%- manual.category %></td>
@@ -41,9 +41,9 @@
                                         <%- manual.status %>
                                     </span>
                                 </td>
-                                <td><%- new Date(manual.added_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
+                                <td><%- new Date(manual.added_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td> -->
                             </tr>
-                            <% }); %>
+                            <!-- <% }); %> -->
                         </tbody>
                     </table>
                 </div>

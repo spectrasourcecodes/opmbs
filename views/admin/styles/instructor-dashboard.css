@@ -447,12 +447,8 @@ tr:hover td {
         display: flex;
     }
 
-    .page-title {
-        font-size: 1.1rem;
-    }
-
     .user-profile span {
-        font-size: .9rem;
+        display: none;
     }
 
     table {
