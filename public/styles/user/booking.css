@@ -58,88 +58,14 @@ article h2{
     }
 }
 
-.booking-form{
-    width: 100%;
-    height: auto;
-    padding: 30px;
-}
-.booking-form h3{
-    text-transform: capitalize;
-}
-.booking-form form{
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    box-shadow: 0 0 5px 3px silver;
-    margin-top: 10px;
-}
-.booking-form form .inputbox{
-    grid-column: span 1;
-}
-.booking-form form .inputbox label{
-    font-size: .9rem;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-.booking-form form .inputbox input{
-    width: 100%;
-    height: 35px;
-    padding-left: 20px;
-    margin-top: 10px;
-    border: 1px solid silver;
-    border-radius: 4px;
-}
-
-.booking-form form .inputbox input[type="submit"]{
-    color: white;
-    font-weight: bold;
-    text-transform: capitalize;
-    padding: 0;
-    background-color: var(--blue);
-    transition: .5s;
-    border: none;
-}
-.booking-form form .inputbox input[type="submit"]:hover{
-    color: var(--blue);
-    background-color: white;
-    box-shadow: 0 0 3px 2px silver;
-}
-
-/* booking media query */
-@media (max-width:600px) {
-    .booking-form{
-        width: 100%;
-        height: auto;
-        padding: 30px 20px;
-    }
-    .booking-form h3{
-        text-transform: capitalize;
-    }
-    .booking-form form{
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        column-gap: 20px;
-        padding: 20px;
-        box-shadow: 0 0 5px 3px silver;
-        margin-top: 10px;
-    }
-}
 
 /* card container */
 .cards-container{
     width: 100%;
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    column-gap: 30px;
-    margin: 20px 0;
-    padding: 0 30px;
 }
 
 .cards-container .card{

@@ -21,28 +21,47 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+
+/* recently added */
+.recently-added{
+    width: 100%; 
+    padding: 30px;
 }
 
+
+/* manual container */
+.container {
+    max-width: 100%;
+    margin: 20px auto;
+    height: 400px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+@media (max-width:600px) {
+    .container {
+        height: 300px;
+        padding: 0%;
+    }
+}
 
 .manuals-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
+    gap: 30px;
     padding: 0px;
 }
 
 .manual-card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 15px;
     display: flex;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+
 }
 
 .cancel-card {
@@ -97,7 +116,7 @@
 }
 
 .book-btn {
-    background-color: var(--primary-color);
+    background-color: var(--blue);
     color: var(--bg-color);
     border: none;
     padding: 6px 12px;

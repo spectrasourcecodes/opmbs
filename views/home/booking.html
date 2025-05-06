@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../bootstrap5/css/all.css">
     <link rel="stylesheet" href="../../public/styles/user/header.css">
     <link rel="stylesheet" href="../../public/styles/user/article.css">
-    <link rel="stylesheet" href="../../public/styles/user/signup.css">
+    <link rel="stylesheet" href="../../public/styles/user/manual-cards.css">
     <link rel="stylesheet" href="../../public/styles/user/4cards.css">
     <link rel="stylesheet" href="../../public/styles/user/footer.css">
 </head>
@@ -20,8 +20,8 @@
                 <label for="nav" class=".logo"><a href="./index.html"><i class="fa-solid fa-book"></i> Spectra <span>lapbook pro</span></a></label>
                 <ul>
                     <a href="./index.html">home</a>
-                    <a href="./booking.html" id="calltoaction">book manual</a>
-                    <a href="#">about</a>
+                    <a href="./booking.html">book manual</a>
+                    <a href="./about.html">about</a>
                     <a href="./help.html">help</a>
                     <a href="./login.html">login</a>
                 </ul>
@@ -34,7 +34,7 @@
                 <ol>
                     <a href="./index.html"><i class="fa-solid fa-home"></i>home</a>
                     <a href="./login.html"><i class="fa-solid fa-unlock"></i>login</a>
-                    <a href="#"><i class="fa-solid fa-building-ngo"></i>about</a>
+                    <a href="./about.html"><i class="fa-solid fa-building-ngo"></i>about</a>
                     <a href="./help.html"><i class="fa-brands fa-accessible-icon"></i>help</a>
                     <a href="./booking.html"><i class="fa-solid fa-book-bookmark"></i>book manual</a>
                 </ol>
@@ -45,83 +45,125 @@
         <article>
             <h2>book your perfect experience</h2>
             <p>Discover and reserve top services with just a few clicks</p>
-            <a href="#">new release</a>
         </article>
 
-        <!-- booking form -->
-        <div class="booking-form">
-            <h3>practical manual booking form</h3>
-            <form action="">
-
-                <div class="inputbox">
-                    <i class="fa-solid fa-user-alt"></i> <label for="full-name">full name</label><br>
-                    <input type="text" name="full-name" id="full-name">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-envelope"></i> <label for="email">email address</label><br>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-building"></i> <label for="department">department</label><br>
-                    <input type="text" name="department" id="department">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-list-numeric"></i> <label for="reg-num">matric number</label><br>
-                    <input type="text" name="reg-num" id="reg-num">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-sort-numeric-down"></i> <label for="c-code">manual course-code</label><br>
-                    <input type="number" name="c-code" id="c-code">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-book"></i> <label for="c-tittle">manual course-tittle</label><br>
-                    <input type="text" name="c-tittle" id="c-tittle">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-copyright"></i> <label for="num-of-copies">number of copies</label><br>
-                    <input type="number" name="num-of-copies" id="num-of-copies">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-calendar"></i> <label for="date">booking date</label><br>
-                    <input type="date" name="date" id="date">
-                </div>
-                <div class="inputbox">
-                    <i class="fa-solid fa-clock"></i> <label for="time">booking time</label><br>
-                    <input type="time" name="time" id="time">
-                </div>
-                <div class="inputbox">
-                    <input type="submit" value="reserve" id="submit">
-                </div>
-
-            </form>
-        </div>
-
-        <!-- cards -->
-        <div class="cards-container">
-            <h3>why lapbook-pro</h3>
-            <div class="wrapper">
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>instant confirmation</h3>
-                    <p>Get immediate booking confirmation with real time availability</p>
-                </div>
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-shield"></i></div>
-                    <h3>secure payment</h3>
-                    <p>Industry standard encryption for all transactions</p>
-                </div>
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <h3>mobile friendly</h3>
-                    <p>Book from anywhere with our responsive design</p>
-                </div>
-                <div class="card">
-                    <div class="icon"><i class="fa-solid fa-headphones-alt"></i></div>
-                    <h3>24/7 support</h3>
-                    <p>Our team is always ready to assist you</p>
+        <!-- recently-added -->
+        <div class="recently-added">
+            <h3>Recently Added</h3>
+            <!-- manual cards -->
+            <div class="container">
+                <div class="manuals-grid">
+                    <!-- Manual Card 1 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-411</span>
+                            <h3 class="course-title">Software Engineering</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 2 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-415</span>
+                            <h3 class="course-title">Algorithm Complexity Analysis</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 3 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-216</span>
+                            <h3 class="course-title">Structured Programming</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 4 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-212</span>
+                            <h3 class="course-title">Data Structure And Algorithm</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 5 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-315</span>
+                            <h3 class="course-title">History Of Compiler Design</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 6 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-317</span>
+                            <h3 class="course-title">Structured Programming</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 7 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-215</span>
+                            <h3 class="course-title">Computer System</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+                    
+                    <!-- Manual Card 8 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-213</span>
+                            <h3 class="course-title">Operating System 1</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
+        
+                    <!-- Manual Card 9 -->
+                    <div class="manual-card">
+                        <div class="card-content">
+                            <span class="course-code">CSC-221</span>
+                            <h3 class="course-title">Computer Programming 2</h3>
+                            <div class="price"> <i class="fa-solid fa-naira-sign"></i> 2,500</div>
+                        </div>
+                        <a href="./login.html" class="book-btn-container">
+                            <button class="book-btn">Book</button>
+                        </a>
+                    </div>
                 </div>
             </div>
-         </div>
+            <!-- manual cards -->
+        </div>
 
          <footer>
             <div class="content">

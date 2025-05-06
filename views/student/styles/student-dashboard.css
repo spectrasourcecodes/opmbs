@@ -238,7 +238,7 @@ body {
     color: var(--text-light);
 }
 
-/* Manuals Table */
+/* Manuals Table
 .manuals-table {
     width: 100%;
     background-color: var(--bg-color);
@@ -284,7 +284,7 @@ tr:hover td {
 .status-booked {
     background-color: #fef3c7;
     color: #92400e;
-}
+} */
 
 .btn {
     padding: 8px 15px;
@@ -365,6 +365,10 @@ tr:hover td {
 @media (max-width: 768px) {
     .card-grid {
         grid-template-columns: 1fr;
+    }
+
+    .card{
+        height: 100px;
     }
     
     .search-filter {
