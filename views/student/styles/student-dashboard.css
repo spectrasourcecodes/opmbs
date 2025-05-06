@@ -238,54 +238,6 @@ body {
     color: var(--text-light);
 }
 
-/* Manuals Table
-.manuals-table {
-    width: 100%;
-    background-color: var(--bg-color);
-    border-radius: 8px;
-    overflow: scroll;
-    scrollbar-width: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    background-color: var(--secondary-color);
-    font-weight: 600;
-}
-
-tr:hover td {
-    background-color: var(--secondary-color);
-}
-
-.status {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.status-available {
-    background-color: #d1fae5;
-    color: #065f46;
-}
-
-.status-booked {
-    background-color: #fef3c7;
-    color: #92400e;
-} */
-
 .btn {
     padding: 8px 15px;
     border-radius: 6px;

@@ -26,6 +26,10 @@
     margin: 0 auto;
 }
 
+.container h3{
+    margin-bottom: 20px;
+}
+
 
 .manuals-grid {
     display: grid;
