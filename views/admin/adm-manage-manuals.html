@@ -31,13 +31,13 @@
         </a>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="admin-portal.html" class="nav-link active">
+                <a href="admin-portal.html" class="nav-link">
                     <span class="nav-icon"><i class="fa-solid fa-dashboard"></i></span>
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="adm-manage-manuals.html" class="nav-link">
+                <a href="adm-manage-manuals.html" class="nav-link active">
                     <span class="nav-icon"><i class="fa-solid fa-book"></i></span>
                     <span class="nav-text">Manage Manuals</span>
                     <span class="admin-badge">Admin</span>
@@ -171,30 +171,26 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label class="form-label">Manual Title</label>
-                        <input type="text" class="form-control" placeholder="Enter manual title" required>
+                        <label class="form-label">Department</label>
+                        <input type="text" class="form-control" placeholder="Enter manual Department" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Subject</label>
+                        <label class="form-label">Course Code</label>
                         <select class="form-control" required>
-                            <option>Chemistry</option>
-                            <option>Physics</option>
-                            <option>Biology</option>
-                            <option>Engineering</option>
-                            <option>Mathematics</option>
+                            <option>CSC 419</option>
+                            <option>CSC 415</option>
+                            <option>CSC 416</option>
+                            <option>CSC 417</option>
+                            <option>CSC 411</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Author</label>
-                        <input type="text" class="form-control" placeholder="Enter author name" required>
+                        <label class="form-label">Course Title</label>
+                        <input type="text" class="form-control" placeholder="Enter Course title" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Edition</label>
                         <input type="text" class="form-control" placeholder="Enter edition number" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">ISBN</label>
-                        <input type="text" class="form-control" placeholder="Enter ISBN" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Total Copies</label>
@@ -204,19 +200,19 @@
                         <label class="form-label">Description</label>
                         <textarea class="form-control" rows="3" placeholder="Enter manual description" required></textarea>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="form-label">Upload Cover Image</label>
                         <input type="file" class="form-control" required>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-outline" type="button" id="cancel-modal">Cancel</button>
-                    <button class="btn btn-primary" type="submit">Save Manual</button>
+                    <button class="btn btn-primary" type="submit">Create Manual</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <script src="script/adm-dashboard.js"></script>
+    <script src="script/manual-management.js"></script>
 </body>
 </html>
