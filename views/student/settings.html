@@ -12,17 +12,17 @@
             <h2>Account Settings</h2>
         </div>
         
-        <% if (successMessage) { %>
+        <!-- <% if (successMessage) { %> -->
         <div class="alert alert-success">
-            <%= successMessage %>
+            <!-- <%= successMessage %> -->
         </div>
-        <% } %>
+        <!-- <% } %> -->
         
-        <% if (errorMessage) { %>
+        <!-- <% if (errorMessage) { %> -->
         <div class="alert alert-danger">
-            <%= errorMessage %>
+            <!-- <%= errorMessage %> -->
         </div>
-        <% } %>
+        <!-- <% } %> -->
         
         <div class="tabs">
             <div class="tab active" data-tab="profile">Profile</div>
@@ -38,10 +38,10 @@
                     </div>
                     <div class="card-body">
                         <div class="avatar-container">
-                            <div class="user-avatar"><%= userInitials %></div>
+                            <div class="user-avatar">IMG</div>
                             <div class="avatar-upload">
                                 <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
-                                <button type="button" class="btn btn-primary" onclick="document.getElementById('avatar-upload').click()">
+                                <button type="button" class="btn btn-primary">
                                     Change Avatar
                                 </button>
                                 <small>JPG, GIF or PNG. Max size 2MB</small>
@@ -49,23 +49,22 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" class="form-control" value="<%= user.name %>" required>
+                            <label for="name">First Name</label>
+                            <input type="text" id="name" name="name" class="form-control" value="Yahaya" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Last Name</label>
+                            <input type="text" id="name" name="name" class="form-control" value="Abdulbari" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-control" value="<%= user.email %>" required>
+                            <input type="email" id="email" name="email" class="form-control" value="yahyaaabdulbari13@gmail.com" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" value="<%= user.phone || '' %>">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="address">Mailing Address</label>
-                            <textarea id="address" name="address" class="form-control" rows="3"><%= user.address || '' %></textarea>
+                            <input type="tel" id="phone" name="phone" class="form-control" value="09066392107">
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Save Changes</button>
